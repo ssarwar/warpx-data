@@ -1,0 +1,45 @@
+{
+  "target": "N2",
+  "model": "iaa_sudden_spectator",
+  "archive_sha256": "b864381086120fff37eb8c658dfcb0f150b80969cf9add626a38d89bab0a3c38",
+  "reference_temperature_K": 0,
+  "reference_temperature_is_model_assumption": true,
+  "maximum_temperature_K": 1000,
+  "maximum_j": 96,
+  "elementary_transitions": [
+    {
+      "rank": 2,
+      "threshold_eV": 0.0014863225708172047,
+      "peak_energy_eV": 2.3,
+      "first_positive_energy_eV": 0.0015,
+      "maximum_eV": 1000.0
+    },
+    {
+      "rank": 4,
+      "threshold_eV": 0.004954408569390682,
+      "peak_energy_eV": 2.3,
+      "first_positive_energy_eV": 0.5,
+      "maximum_eV": 1000.0
+    },
+    {
+      "rank": 6,
+      "threshold_eV": 0.010404257995720433,
+      "peak_energy_eV": 30.0,
+      "first_positive_energy_eV": 1.0,
+      "maximum_eV": 1000.0
+    }
+  ],
+  "production_ready": false,
+  "gates": [
+    "Negative unchanged angular-bin rate in the inclusive decomposition",
+    "Low-energy/resonant angular approximation has no validated unified continuation",
+    "No bound on omitted higher-rank rotational energy-transfer moments",
+    "No validated rotational continuation from 20 eV through beam electron energies"
+  ],
+  "minimum_unchanged_rate_m3_s": -4.329584436942867e-15,
+  "minimum_at_energy_eV": 2.4220571922147003,
+  "minimum_at_cosine_interval": [
+    -0.8125,
+    -0.78125
+  ]
+}
