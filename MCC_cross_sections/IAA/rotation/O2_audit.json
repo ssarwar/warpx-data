@@ -1,6 +1,6 @@
 {
   "target": "O2",
-  "model": "iaa_born",
+  "model": "elastic_dcs",
   "archive_sha256": "b864381086120fff37eb8c658dfcb0f150b80969cf9add626a38d89bab0a3c38",
   "reference_temperature_K": 0,
   "reference_temperature_is_model_assumption": true,
@@ -9,15 +9,12 @@
   "elementary_transitions": [],
   "production_ready": false,
   "gates": [
-    "Negative unchanged angular-bin rate in the inclusive decomposition",
-    "Low-energy/resonant angular approximation has no validated unified continuation",
+    "Low-energy/resonant integral-rate continuation requires validation",
     "No bound on omitted higher-rank rotational energy-transfer moments",
     "No validated rotational continuation from 20 eV through beam electron energies"
   ],
-  "minimum_unchanged_rate_m3_s": -1.1308650403835425e-15,
-  "minimum_at_energy_eV": 20.0,
-  "minimum_at_cosine_interval": [
-    -0.5625,
-    -0.53125
-  ]
+  "minimum_unchanged_rate_m3_s": 0.0,
+  "minimum_at_energy_eV": 0.0,
+  "angular_sampling": "existing elastic DCS",
+  "conditional_model": "integral rates conditioned only on exact recoil accessibility"
 }
