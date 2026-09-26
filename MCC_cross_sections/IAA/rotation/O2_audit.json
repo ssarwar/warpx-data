@@ -2,7 +2,7 @@
   "target": "O2",
   "model": "elastic_dcs",
   "archive_sha256": "b864381086120fff37eb8c658dfcb0f150b80969cf9add626a38d89bab0a3c38",
-  "reference_temperature_K": 0,
+  "reference_temperature_K": 0.0,
   "reference_temperature_is_model_assumption": true,
   "maximum_temperature_K": 1000,
   "maximum_j": 112,
@@ -16,5 +16,7 @@
   "minimum_unchanged_rate_m3_s": 0.0,
   "minimum_at_energy_eV": 0.0,
   "angular_sampling": "existing elastic DCS",
-  "conditional_model": "integral rates conditioned only on exact recoil accessibility"
+  "conditional_model": "angle-independent rotational outcomes with canonical energy thresholds",
+  "bundle_format": "WARPX_THERMAL_ROTATION_V3",
+  "rate_detailed_balance": "relativistic electron momenta in the heavy-target limit"
 }

@@ -1,0 +1,29 @@
+{
+  "purpose": "Synthetic software verification only; not N2/O2 production cross sections",
+  "format": "WARPX_THERMAL_ROTATION_V3",
+  "threshold_model": "canonical level spacings; recoil shifts omitted",
+  "angular_model": "independent elastic DCS",
+  "energy_range_eV": [
+    0,
+    10
+  ],
+  "tested_temperatures_K": [
+    0,
+    100,
+    300,
+    1000
+  ],
+  "generator": "WarpX Examples/Tests/collision/analysis_rotation_reference.py --export-only",
+  "sha256": {
+    "N2_analytic.rot": "65c5cfd08c12ffba60da04be5459e3529ff16bf03b76f2774f918a5d9ec08a59",
+    "N2_elastic_dcs.txt": "9a882147af7dc80adca43012e1eeebee6132f963bb1b2410e96a735dc99e81ce",
+    "N2_elastic_dcs_anisotropic.txt": "3e352bb1a16ae65d538d9733e86872c7a857ee9b652678bbaa7a2600a529b84e",
+    "N2_inclusive.txt": "29f73645981d4e86a65cc9310b40a3b8b6b7fb45682f86b42e436f277457bff1",
+    "N2_ordinary.txt": "3d0d12ba8d7a367ccb124bf1b4f35ce5ad475d2226b2fc5ae1a686f35bee7794",
+    "O2_analytic.rot": "1e336b24ec6364f05592082db5c8d6412f11b8d0303ec7b6f01b9db8b9831aa8",
+    "O2_elastic_dcs.txt": "9a882147af7dc80adca43012e1eeebee6132f963bb1b2410e96a735dc99e81ce",
+    "O2_elastic_dcs_anisotropic.txt": "3e352bb1a16ae65d538d9733e86872c7a857ee9b652678bbaa7a2600a529b84e",
+    "O2_inclusive.txt": "29f73645981d4e86a65cc9310b40a3b8b6b7fb45682f86b42e436f277457bff1",
+    "O2_ordinary.txt": "3d0d12ba8d7a367ccb124bf1b4f35ce5ad475d2226b2fc5ae1a686f35bee7794"
+  }
+}
