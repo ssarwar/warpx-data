@@ -10,6 +10,7 @@ a microscopic approach* (2023), chapters 11–12.
 | `rotation_0_2.txt` | Elementary J=0→2 excitation | threshold–1000 eV |
 | `rotation_0_4.txt` | Elementary J=0→4 excitation | threshold–1000 eV |
 | `rotation_0_6.txt` | Elementary J=0→6 excitation | threshold–1000 eV |
+| `thermal_spectator.rot` | Discrete IAA spectator differential weights, V5 format | 0–1000 eV |
 
 Integral files have two columns: energy in eV and cross section in m².
 They preserve positive source knots and adapt log–log interpolation to WarpX's
@@ -36,5 +37,38 @@ rotational excitations sum to 2.40×10⁻¹⁹ m², while the residual integral 
 1.73×10⁻¹⁹ m². `rotation_0_0.txt` is a separate theoretical J=0→0 result,
 not the residual minus rotation and not a thermal average. Do not add the
 rotational rates to `elastic.txt` or use a negative unchanged remainder.
-The data here retain the source values; they do not impose a normalization
-to conceal that discrepancy.
+The two-column source files retain those values. The conditional model below
+uses them as relative differential weights and therefore defines different
+effective integral rotational rates.
+
+`thermal_spectator.rot` is the kinetic counterpart of the IAA mean-loss
+prescription (thesis Eq. 2.48). Use it on the same elastic process as
+`elastic.txt` and `elastic_dcs.txt`, with `rotation_model = iaa_spectator`.
+After the elastic angle is drawn, normalized sudden/spectator weights select
+unchanged, excitation or de-excitation outcomes. Angular averaging under the
+elastic DCS determines their effective integral rates. No additional rotational
+processes should be added. Discrete energy changes retain the transfer variance
+and angle–energy correlation rather than applying a mean loss.
+
+The little-endian V5 bundle stores energy and angular grids, four tabulated
+angular basis functions, and finite-threshold transition coefficients. It is
+generated offline from the elementary elmolcs data by WarpX's
+`Tools/CrossSections/thermiaa_spectator.py`; WarpX evaluates no Bessel functions
+and generates no physical data files during a simulation. Coefficients have
+a common scale removed at each energy because it cancels in the conditional
+probabilities. They are relative differential weights, not cross sections in m².
+The ordinary elastic file continues to supply the absolute event rate.
+
+The file resolves initial populations through J=96 for temperatures through
+1000 K, uses N₂ even:odd nuclear-spin weights 6:3, and includes final states
+through J=102. Runtime initialization prepares the chosen fixed Boltzmann
+distribution; it does not evolve neutral states. The angular functions
+use the Kutz–Meyer internuclear separation R=2.068 Bohr radii. The included ranks
+are L=0, 2, 4 and 6. This truncation does not establish convergence of higher-rank
+rainbows at high energies. No continuation above 1000 eV is supplied.
+
+The spectator approximation is known to be inaccurate in the thermal and
+resonance regimes. Its use there is an explicit part of this IAA-style model.
+Normalizing its transition probabilities does not enforce detailed balance
+or guarantee Maxwellian electron equilibrium. These are physical model
+limitations, distinct from interpolation or sampling error.
