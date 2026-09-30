@@ -58,6 +58,9 @@ and generates no physical data files during a simulation. Coefficients have
 a common scale removed at each energy because it cancels in the conditional
 probabilities. They are relative differential weights, not cross sections in m².
 The ordinary elastic file continues to supply the absolute event rate.
+Energy-row probabilities use square-root mixing immediately above zero and
+the first excitation threshold, and linear mixing on the other intervals.
+Energy knots and canonical level spacings remain in double precision.
 
 The file resolves initial populations through J=96 for temperatures through
 1000 K, uses N₂ even:odd nuclear-spin weights 6:3, and includes final states
