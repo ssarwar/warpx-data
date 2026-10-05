@@ -1,0 +1,28 @@
+WARPX_THERMAL_ROTATION_V6
+O2 reciprocal_hybrid alias
+300 5.3135257484320075e-26 1000000000 1000 10000 2.281 0.5677
+15 9 276034512
+energies f64 1759 0
+rates f64 1759 14072
+coordinates u32 1759 28144
+angular_offsets u32 1760 35184
+angular_u f64 999628 42224
+deflection f64 999628 8039248
+changing f32 999628 16036272
+conditional_offsets u32 1760 20034784
+conditional_u f64 104924 20041824
+conditional_cells u32 104924 20881216
+cell_offsets u32 107108 21300912
+outcomes f64 5314 21729344
+high_edges f64 2185 21771856
+high_cells u32 2184 21789336
+aliases alias 31779555 21798072
+tables-000.bin 33554432
+tables-001.bin 33554432
+tables-002.bin 33554432
+tables-003.bin 33554432
+tables-004.bin 33554432
+tables-005.bin 33554432
+tables-006.bin 33554432
+tables-007.bin 33554432
+tables-008.bin 7599056

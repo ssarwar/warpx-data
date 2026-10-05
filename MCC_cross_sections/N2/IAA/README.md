@@ -1,3 +1,16 @@
+## Reciprocal thermal model
+
+`reciprocal_hybrid_300K/thermal_rotation.rot` is the prepared, combined elastic
+and rotational family for the reciprocal N2/O2 construction. It covers 0–1 GeV
+at a fixed 300 K rotational temperature; see its README for configuration and
+continuations. The short elementary rotational curves below remain source
+inputs, and must not be added to the inclusive family as separate processes.
+
+New ordinary tables declare `energy_min_eV`, `energy_max_eV`, and
+`outside_energy_range = error`. The matching WarpX reader enforces these bounds
+before either MCC selector path. Their last values do not authorize an
+unlimited constant extrapolation.
+
 Electron–N₂ cross sections from the supplied **elmolcs IAA** data, described in
 A. Schmalzried, *Electron Thermal Runaway in Atmospheric Electrified Gases:
 a microscopic approach* (2023), chapters 11–12.

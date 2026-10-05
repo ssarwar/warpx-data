@@ -1,3 +1,6 @@
+# energy_min_eV = 0
+# energy_max_eV = 1000
+# outside_energy_range = error
 # e + N2, J=0->0; elmolcs iaa*, Kutz and Meyer (1995), Fig. 7a.
 # Energy (eV), cross section (m^2); linear interpolation
 0.00000000000000000e+00 1.080000000000e-20

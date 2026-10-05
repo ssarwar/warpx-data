@@ -1,3 +1,6 @@
+# energy_min_eV = 0
+# energy_max_eV = 1000000000
+# outside_energy_range = error
 # e + N2: vibrationally elastic residual; elmolcs iaa*, Schmalzried (2023), Eq. 11.10.
 # Above 6000 eV: elmolcs Elastic.gen_Born, matched continuously to the last residual datum.
 # Energy (eV), cross section (m^2); linear interpolation
