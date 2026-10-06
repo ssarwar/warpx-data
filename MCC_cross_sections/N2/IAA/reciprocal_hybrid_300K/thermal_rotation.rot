@@ -1,7 +1,7 @@
 WARPX_THERMAL_ROTATION_V6
 N2 reciprocal_hybrid alias
 300 4.6517345088292439e-26 1000000000 1000 10000 2.068 0.6052
-15 14 467310744
+17 15 471544052
 energies f64 2059 0
 rates f64 2059 16472
 coordinates u32 2059 32944
@@ -17,6 +17,8 @@ outcomes f64 11174 25888712
 high_edges f64 2185 25978104
 high_cells u32 2184 25995584
 aliases alias 55163303 26004320
+angular_lookup u32 529163 467310744
+conditional_lookup u32 529163 469427400
 tables-000.bin 33554432
 tables-001.bin 33554432
 tables-002.bin 33554432
@@ -30,4 +32,5 @@ tables-009.bin 33554432
 tables-010.bin 33554432
 tables-011.bin 33554432
 tables-012.bin 33554432
-tables-013.bin 31103128
+tables-013.bin 33554432
+tables-014.bin 1782004

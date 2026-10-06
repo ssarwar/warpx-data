@@ -29,3 +29,7 @@ physical accuracy of the low-energy O2 resonance or high-J continuation.
 The accompanying `.bin` parts contain only scientific sampling arrays. These
 production files use aliases; cumulative comparison tables and validation
 records are kept with the tests, outside warpx-data.
+
+The index also supplies compact quantile search bounds. They shorten exact
+searches of the stored CDF grids and do not change any cross section,
+probability, angle, or discrete energy change.
