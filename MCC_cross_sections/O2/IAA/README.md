@@ -1,9 +1,10 @@
 ## Reciprocal thermal model
 
-`reciprocal_hybrid_300K/thermal_rotation.rot` is the prepared, combined elastic
+`reciprocal_hybrid_300K/thermal_rotation.rot` is the readable V7 combined elastic
 and rotational family for the reciprocal N2/O2 construction. It covers 0–1 GeV
-at a fixed 300 K rotational temperature; see its README for configuration and
-continuations. The short elementary rotational curves below remain source
+at a fixed 300 K rotational temperature; see [its README](reciprocal_hybrid_300K/README.md) for configuration, units,
+file layout, initialization and continuations. The full derivation is in the
+[WarpX multiphysics theory manual](https://github.com/ssarwar/WarpX/blob/codex/rigid-beam-immobile-ions-development-sync/Docs/source/theory/multiphysics/rotational_scattering.rst). The short elementary rotational curves below remain source
 inputs, and must not be added to the inclusive family as separate processes.
 
 New ordinary tables declare `energy_min_eV`, `energy_max_eV`, and
@@ -43,3 +44,30 @@ energy extent does not establish the Born model's physical accuracy throughout i
 The elastic integral already includes unresolved rotation. Do not add this
 excitation as an extra channel without a consistent unchanged component and
 thermal de-excitation rates.
+
+## Imported elastic DCS provenance
+
+The following descriptions are the supplied elmolcs DCS source header. These
+are the source's fitting/potential labels, not WarpX input options. WarpX
+imports the resulting angular grid. The reciprocal hybrid subsequently uses
+its documented smooth 8–10 keV transition to screened Rutherford.
+
+```text
+COMMENT: Least-squares Fits to DCS Database : combined use of MPSA (when it works) and LS-Legendre fit
+COMMENT: Below 1 eV : MERT from A = 0.3 polarisability and permanent quadrupole
+COMMENT: Below 10 eV : Sullivan et al 1995, Green et al 1997, Linert et al 2004 exclusively
+COMMENT: From 15 eV to : + Wöste et al 1995, Trajmar et al 1971 and Shyn&Sharp 1982
+COMMENT: From 30 eV : Calculations angular-coupling V=seopa (Eth=4.262 eV)
+COMMENT: from 200 eV (s=0.85) 500 eV (s=0.92) : IAM V=seca (Vb, cross=outer)
+COMMENT: from 1000 eV (s=0.95) : IAM V=seca (Vb, cross = outer)
+COMMENT: from 4000 eV (s=1) : IAM V=sepa Vb
+COMMENT: from 8000 eV : V=sepa Born only
+UPDATED: 12/12/2022
+```
+
+The thesis discusses the physical cross sections in Chapter 11/Section 12.1,
+the fits in Chapter 13, and database construction/comparison in Chapters 15–16.
+Printed p. 567 identifies limitations in the sub-eV elastic data: the residual
+is inferred from total scattering, the modified effective-range angular model
+is basic, and only 1, 10 and 100 meV source knots describe the lowest energies.
+Dense exported grids improve numerical interpolation, not the physical evidence.
