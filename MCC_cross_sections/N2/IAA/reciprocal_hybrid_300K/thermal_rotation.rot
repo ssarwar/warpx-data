@@ -1,36 +1,19 @@
-WARPX_THERMAL_ROTATION_V6
-N2 reciprocal_hybrid alias
+WARPX_THERMAL_ROTATION_V7
+N2 reciprocal_hybrid probabilities
 300 4.6517345088292439e-26 1000000000 1000 10000 2.068 0.6052
-17 15 471544052
-energies f64 2059 0
-rates f64 2059 16472
-coordinates u32 2059 32944
-angular_offsets u32 2060 41184
-angular_u f64 1198987 49424
-deflection f64 1198987 9641320
-changing f32 1198987 19233216
-conditional_offsets u32 2060 24029168
-conditional_u f64 115399 24037408
-conditional_cells u32 115399 24960600
-cell_offsets u32 116627 25422200
-outcomes f64 11174 25888712
-high_edges f64 2185 25978104
-high_cells u32 2184 25995584
-aliases alias 55163303 26004320
-angular_lookup u32 529163 467310744
-conditional_lookup u32 529163 469427400
-tables-000.bin 33554432
-tables-001.bin 33554432
-tables-002.bin 33554432
-tables-003.bin 33554432
-tables-004.bin 33554432
-tables-005.bin 33554432
-tables-006.bin 33554432
-tables-007.bin 33554432
-tables-008.bin 33554432
-tables-009.bin 33554432
-tables-010.bin 33554432
-tables-011.bin 33554432
-tables-012.bin 33554432
-tables-013.bin 33554432
-tables-014.bin 1782004
+14
+energies f64 2059 energies.txt
+rates f64 2059 rates.txt
+coordinates u32 2059 coordinates.txt
+angular_offsets u32 2060 angular_offsets.txt
+angular_u f64 1198987 angular_u.txt
+deflection f64 1198987 deflection.txt
+changing f32 1198987 changing.txt
+conditional_offsets u32 2060 conditional_offsets.txt
+conditional_u f64 115399 conditional_u.txt
+conditional_cells u32 115399 conditional_cells.txt
+cell_offsets u32 116627 cell_offsets.txt
+outcomes f64 11174 outcomes.txt
+high_edges f64 2185 high_edges.txt
+high_cells u32 2184 high_cells.txt
+probabilities alias 55163303 probabilities.txt

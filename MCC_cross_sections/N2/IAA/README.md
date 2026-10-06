@@ -1,9 +1,10 @@
 ## Reciprocal thermal model
 
-`reciprocal_hybrid_300K/thermal_rotation.rot` is the prepared, combined elastic
+`reciprocal_hybrid_300K/thermal_rotation.rot` is the readable V7 combined elastic
 and rotational family for the reciprocal N2/O2 construction. It covers 0–1 GeV
-at a fixed 300 K rotational temperature; see its README for configuration and
-continuations. The short elementary rotational curves below remain source
+at a fixed 300 K rotational temperature; see [its README](reciprocal_hybrid_300K/README.md) for configuration, units,
+file layout, initialization and continuations. The full derivation is in the
+[WarpX multiphysics theory manual](https://github.com/ssarwar/WarpX/blob/codex/rigid-beam-immobile-ions-development-sync/Docs/source/theory/multiphysics/rotational_scattering.rst). The short elementary rotational curves below remain source
 inputs, and must not be added to the inclusive family as separate processes.
 
 New ordinary tables declare `energy_min_eV`, `energy_max_eV`, and
@@ -88,3 +89,28 @@ resonance regimes. Its use there is an explicit part of this IAA-style model.
 Normalizing its transition probabilities does not enforce detailed balance
 or guarantee Maxwellian electron equilibrium. These are physical model
 limitations, distinct from interpolation or sampling error.
+
+## Imported elastic DCS provenance
+
+The following descriptions are the supplied elmolcs DCS source header. These
+are the source's fitting/potential labels, not WarpX input options. WarpX
+imports the resulting angular grid. The reciprocal hybrid subsequently uses
+its documented smooth 8–10 keV transition to screened Rutherford.
+
+```text
+COMMENT: Least-squares Fits to DCS Database (below 30 eV)
+COMMENT: Below 0.1 eV : MERT estimate with A = 0.44
+COMMENT: Between 4 and 8 eV, assistance from Sun et al. (1995) table VII. predicted scattering at 180° (only 1 point added with a 15% uncertainty (~ 2x higher than exp data))
+COMMENT: Above 30 eV to 150 eV : V=seopa with angular-momentum coupling, Vex(fermi=True) and Vpol(pola2=0.5,exp=True)
+COMMENT: 200 (s=0.85) to 850(s=0.86),900(s=0.87),950(s=0.885), 1000 (s=0.9) eV: IAM with V=seca, Vex(fermi=False), Vcop(cross=outer)
+COMMENT: Above 1000 eV : Removal of correlation potential and use of Buckingham polarisation (pola2=0.5),
+COMMENT: Above 8000 eV: Removal of absorption potential and use of Born approximation only
+UPDATED: 22/09/2022
+```
+
+The thesis discusses the physical cross sections in Chapter 11/Section 12.1,
+the fits in Chapter 13, and database construction/comparison in Chapters 15–16.
+Printed p. 567 identifies limitations in the sub-eV elastic data: the residual
+is inferred from total scattering, the modified effective-range angular model
+is basic, and only 1, 10 and 100 meV source knots describe the lowest energies.
+Dense exported grids improve numerical interpolation, not the physical evidence.
