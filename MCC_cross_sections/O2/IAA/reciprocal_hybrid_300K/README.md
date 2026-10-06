@@ -18,6 +18,18 @@ The pages cover [physical quantities](https://github.com/ssarwar/WarpX/blob/code
 Validation and performance results are maintained with WarpX, not in this
 production data directory.
 
+## Rotational DCS and continued development
+
+The gas-specific [rotational DCS specification](rotational_dcs.md) gives the
+formulas, energy ranges, angular interpolation, blending functions and final
+unchanged/excitation/de-excitation probabilities. It explicitly separates
+source evidence from adopted continuations.
+
+For a new task or checkout, use the [continuing development guide](https://github.com/ssarwar/WarpX/blob/codex/rigid-beam-immobile-ions-development-sync/Docs/source/theory/multiphysics/rotational_scattering/development.rst).
+It records the code/data locations, reproducible commands, test requirements
+and physical assumptions. The input is identified by gas, temperature and
+physical model; WarpX identifies its storage layout automatically.
+
 ## Using these files
 
 Configure one electron Background MCC elastic process with:
@@ -129,7 +141,7 @@ sudden approximation neglects finite rotational-gap corrections.
 
 ## Readable files and units
 
-`thermal_rotation.rot` is a UTF-8 V7 index. Every payload in this directory is
+`thermal_rotation.rot` is a UTF-8 index. Every payload in this directory is
 plain text. The arrays are numerical representations of a joint distribution,
 not independent processes. Zero-based indices refer to other arrays as follows.
 
@@ -153,7 +165,7 @@ reuses an already written row beginning at zero-based index `start`; its entire
 range must precede the copy. Reuse changes no values. Float64 and float32 numbers
 carry sufficient digits to round-trip exactly. Integer types are checked.
 
-The index starts with `WARPX_THERMAL_ROTATION_V7`, the target/model and
+The index starts with `WARPX_RECIPROCAL_ROTATION`, the target/model and
 `probabilities`, then seven physical values: temperature in K, mass in kg,
 maximum energy in eV, high-energy switch in eV, Rutherford switch in eV,
 separation in Bohr radii, and screening radius in Bohr radii. After the ordinary
@@ -161,7 +173,7 @@ array count, each line gives `name type count filename`. The final line
 `probabilities alias count probabilities.txt` declares the expanded alias count
 and is additional to the ordinary array count.
 
-`probabilities.txt` begins with `WARPX_PROBABILITY_FACTORS_V1`, the cell count
+`probabilities.txt` begins with `WARPX_ROTATIONAL_PROBABILITIES`, the cell count
 and expanded entry count. A block begins with
 `block first_cell cell_count outcome_count factor_rank`. Each outcome line
 contains its palette index, a count of half-open support intervals within that
@@ -187,12 +199,12 @@ negative reconstruction or normalization defects.
 
 ## Why initialize instead of shipping binary caches?
 
-The original V6 files stored about 87 million 8-byte alias entries across both
+The original binary files stored about 87 million 8-byte alias entries across both
 gases. Those entries repeated closely related distributions at many angular
 nodes. The 24 `.bin` parts were just 32 MiB slices of that memory layout, with
 no physical meaning assigned to individual files.
 
-V7 stores the probability information in readable factored form. WarpX reads
+The text format stores the probability information in readable factored form. WarpX reads
 and reconstructs it, prepares aliases (or cumulative reference arrays) and exact
 quantile-search bounds **once at initialization**, then uploads immutable arrays.
 No fitting to papers, nonlinear source solve, elmolcs dependency, Python call
@@ -205,8 +217,8 @@ The text data are smaller than the former device-memory images but remain
 substantial: they represent energy- and angle-dependent distributions over
 many rotational outcomes. This encoding separates a reviewable input format
 from the optimized device representation. Historical binary files remain in
-older Git commits; this update does not rewrite repository history. V6 readers
-remain supported for existing inputs. The separate parent-directory N2 V5
+older Git commits; this update does not rewrite repository history. Binary readers
+remain supported for existing inputs. The separate parent-directory N2
 `thermal_spectator.rot` is legacy binary data for the older optional model.
 
 The device alias entry is eight bytes: float32 cutoff plus uint16 alternate
@@ -221,9 +233,9 @@ particle energies matters.
 The maintained exporter and independent checks live in WarpX
 `Tools/CrossSections/reciprocal_rotation`. Follow its README to prepare the
 source reference, refine it, validate physical and numerical moments, and
-encode V7 with `text_bundle.py`. The simulation's C++ reader independently
+encode the readable input with `text_bundle.py`. The simulation's C++ reader independently
 reconstructs the probabilities; `check_text_cells.py` compares every decoded
 cell, including float32 alias packing, with the original validated distribution.
 Only validated production inputs and numerical source data belong here.
-Put intermediate V6 caches, additional-temperature test fixtures, reports and
+Put intermediate prepared binary caches, additional-temperature test fixtures, reports and
 benchmarks in a build directory outside warpx-data.

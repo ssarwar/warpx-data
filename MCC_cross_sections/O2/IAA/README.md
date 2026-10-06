@@ -1,10 +1,12 @@
 ## Reciprocal thermal model
 
-`reciprocal_hybrid_300K/thermal_rotation.rot` is the readable V7 combined elastic
+`reciprocal_hybrid_300K/thermal_rotation.rot` is the readable combined elastic
 and rotational family for the reciprocal N2/O2 construction. It covers 0–1 GeV
 at a fixed 300 K rotational temperature; see [its README](reciprocal_hybrid_300K/README.md) for configuration, units,
 file layout, initialization and continuations. The full derivation is in the
-[WarpX multiphysics theory manual](https://github.com/ssarwar/WarpX/blob/codex/rigid-beam-immobile-ions-development-sync/Docs/source/theory/multiphysics/rotational_scattering.rst). The short elementary rotational curves below remain source
+[WarpX multiphysics theory manual](https://github.com/ssarwar/WarpX/blob/codex/rigid-beam-immobile-ions-development-sync/Docs/source/theory/multiphysics/rotational_scattering.rst). The gas-specific [rotational DCS construction](reciprocal_hybrid_300K/rotational_dcs.md)
+gives formulas, energy ranges and interpolation rules. The short elementary
+rotational curves below remain source
 inputs, and must not be added to the inclusive family as separate processes.
 
 New ordinary tables declare `energy_min_eV`, `energy_max_eV`, and

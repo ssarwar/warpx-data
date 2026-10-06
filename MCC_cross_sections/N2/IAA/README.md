@@ -1,10 +1,12 @@
 ## Reciprocal thermal model
 
-`reciprocal_hybrid_300K/thermal_rotation.rot` is the readable V7 combined elastic
+`reciprocal_hybrid_300K/thermal_rotation.rot` is the readable combined elastic
 and rotational family for the reciprocal N2/O2 construction. It covers 0–1 GeV
 at a fixed 300 K rotational temperature; see [its README](reciprocal_hybrid_300K/README.md) for configuration, units,
 file layout, initialization and continuations. The full derivation is in the
-[WarpX multiphysics theory manual](https://github.com/ssarwar/WarpX/blob/codex/rigid-beam-immobile-ions-development-sync/Docs/source/theory/multiphysics/rotational_scattering.rst). The short elementary rotational curves below remain source
+[WarpX multiphysics theory manual](https://github.com/ssarwar/WarpX/blob/codex/rigid-beam-immobile-ions-development-sync/Docs/source/theory/multiphysics/rotational_scattering.rst). The gas-specific [rotational DCS construction](reciprocal_hybrid_300K/rotational_dcs.md)
+gives formulas, energy ranges and interpolation rules. The short elementary
+rotational curves below remain source
 inputs, and must not be added to the inclusive family as separate processes.
 
 New ordinary tables declare `energy_min_eV`, `energy_max_eV`, and
@@ -24,7 +26,7 @@ a microscopic approach* (2023), chapters 11–12.
 | `rotation_0_2.txt` | Elementary J=0→2 excitation | threshold–1000 eV |
 | `rotation_0_4.txt` | Elementary J=0→4 excitation | threshold–1000 eV |
 | `rotation_0_6.txt` | Elementary J=0→6 excitation | threshold–1000 eV |
-| `thermal_spectator.rot` | Discrete IAA spectator differential weights, V5 format | 0–1000 eV |
+| `thermal_spectator.rot` | Discrete IAA spectator differential weights, spectator format | 0–1000 eV |
 
 Integral files have two columns: energy in eV and cross section in m².
 They preserve positive source knots and adapt log–log interpolation to WarpX's
@@ -64,7 +66,7 @@ elastic DCS determines their effective integral rates. No additional rotational
 processes should be added. Discrete energy changes retain the transfer variance
 and angle–energy correlation rather than applying a mean loss.
 
-The little-endian V5 bundle stores energy and angular grids, four tabulated
+The little-endian spectator bundle stores energy and angular grids, four tabulated
 angular basis functions, and finite-threshold transition coefficients. It is
 generated offline from the elementary elmolcs data by WarpX's
 `Tools/CrossSections/thermiaa_spectator.py`; WarpX evaluates no Bessel functions
