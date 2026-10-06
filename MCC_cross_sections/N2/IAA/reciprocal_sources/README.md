@@ -6,7 +6,7 @@ records. The prepared 300 K model is in
 
 | File | Meaning and ordering |
 |---|---|
-| `n2_gote.json` | Published Table 1 transfer-rank percentages: energy keys in eV; angular columns 10°, 20°, …, 160°; rows follow the printed ranks and final reported total/DCS row |
+| `n2_gote.json` | Published Table 1 transfer-rank percentages: energy keys in eV; angular columns 10°, 20°, …, 160°; rows give the reported elementary ranks (0,2,…,8 or 10); the final row is the rotationally summed DCS in 10⁻²⁰ m²/sr |
 | `n2_jung_digitization.json` | Approximate manual Fig. 5 readings for unchanged, +2 and +4 branches at seven angles; units, temperature and reading uncertainty are explicit |
 | `n2_jung.json` | Nonnegative elementary rank-0, rank-2 and rank-4 fractions inferred from those thermal branches, at 2.22 and 2.47 eV; columns 15°, 30°, …, 105° |
 
@@ -18,7 +18,9 @@ not a negative cross section. The nominal completion assigns 0.5%. A column
 is retained only when its possible censored sum brackets 100% within 0.3
 percentage points. Inconsistent columns are replaced by interpolation from
 consistent neighboring angles, while the published values remain here.
-Reported ranks are not a complete bound-rotor spectrum at higher energies.
+The final absolute DCS row is retained for source comparison, but IAA supplies
+the production total and angular marginal. Reported ranks are not a complete
+bound-rotor spectrum at higher energies.
 
 Jung, Antoni, Muller, Kochem and Ehrhardt, *Rotational excitation of N₂, CO and
 H₂O by low-energy electron collisions*, J. Phys. B **15**, 3535–3555 (1982),
