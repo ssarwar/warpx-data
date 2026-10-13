@@ -1,0 +1,19 @@
+WARPX_RECIPROCAL_ROTATION
+O2 reciprocal_hybrid probabilities
+300 5.3135257484320075e-26 1000000000 1000 10000 2.281 0.5677
+14
+energies f64 1759 energies.txt
+rates f64 1759 rates.txt
+coordinates u32 1759 coordinates.txt
+angular_offsets u32 1760 angular_offsets.txt
+angular_u f64 999628 angular_u.txt
+deflection f64 999628 deflection.txt
+changing f32 999628 changing.txt
+conditional_offsets u32 1760 conditional_offsets.txt
+conditional_u f64 104924 conditional_u.txt
+conditional_cells u32 104924 conditional_cells.txt
+cell_offsets u32 107108 cell_offsets.txt
+outcomes f64 5314 outcomes.txt
+high_edges f64 2185 high_edges.txt
+high_cells u32 2184 high_cells.txt
+probabilities alias 31779555 probabilities.txt
