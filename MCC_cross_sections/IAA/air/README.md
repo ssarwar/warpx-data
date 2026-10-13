@@ -71,10 +71,14 @@ Experimental profiles are normalized independently of the integral rate.
 Outside documented transition regions, the normalized elastic IAA shape is
 used without introducing another elastic or rotational event.
 
-Two O2 b-state entries in the archive (94 at 5 eV/12 degrees and 89 at
-15 eV/36 degrees, in the original table units) are possible decimal transcription
-outliers. They are retained verbatim and flagged in the physical provenance;
-no inferred decimal correction is applied without the original paper.
+Two O2 b-state archive entries are corrected against Table I(b), p. 1007 of
+[Shyn-Sweeney 1993](https://doi.org/10.1103/PhysRevA.47.1006): 94 becomes 9.4
+at 5 eV/12 degrees and 89 becomes 8.9 at 15 eV/36 degrees, in units of
+1e-20 cm2/sr. The decimal points are visible in the published table but also
+missing from the PDF text layer. `O2/IAA/air/angular/angular_sources.json`
+records the original values, corrections, citation and verified PDF SHA256.
+The normalized angular profile is regenerated; integral rates and energy losses
+are unchanged.
 
 `.angular` files use `WARPX_EXCITATION_ANGULAR_V1`, followed by the target,
 relative profile path, relative elastic-fallback path and active energy bounds.

@@ -1032,7 +1032,7 @@
             156.0
           ],
           "values": [
-            94.0,
+            9.4,
             15.0,
             18.0,
             17.0,
@@ -1047,14 +1047,27 @@
             16.0
           ],
           "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
-          "source_quality_note": "Archive contains 94 at (5 eV, 12 deg) and 89 at (15 eV, 36 deg); possible decimal transcription outliers. Values retained verbatim pending confirmation from Shyn-Sweeney 1993.",
+          "source_repairs": [
+            {
+              "kind": "decimal_transcription",
+              "angle_deg": 12,
+              "original_value": 94,
+              "corrected_value": 9.4,
+              "units": "1e-20 cm2/sr",
+              "reference": "Shyn and Sweeney, Phys. Rev. A 47, 1006 (1993)",
+              "doi": "10.1103/PhysRevA.47.1006",
+              "location": "Table I(b), p. 1007",
+              "verification": "visual inspection of the published table; the PDF text layer also omits these decimal points",
+              "source_pdf_sha256": "81ae455b82ba89b7a39d34364d10a7feb539f8bb3ac27070d699b226f17fc3c9"
+            }
+          ],
           "completion": {
             "model": "boundary_matched_elastic",
             "solid_angle_coverage": 0.9458465291882032,
-            "modeled_probability": 0.09233756315009421,
+            "modeled_probability": 0.04834089561650236,
             "moment_sensitivity_to_constant_caps": [
-              0.0003291111430110924,
-              0.001979197225764425
+              0.0008101883269386325,
+              0.0010993739471374883
             ]
           },
           "accepted": true
@@ -1176,7 +1189,7 @@
           "values": [
             3.9,
             8.5,
-            89.0,
+            8.9,
             10.0,
             7.9,
             7.4,
@@ -1189,14 +1202,27 @@
             3.1
           ],
           "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
-          "source_quality_note": "Archive contains 94 at (5 eV, 12 deg) and 89 at (15 eV, 36 deg); possible decimal transcription outliers. Values retained verbatim pending confirmation from Shyn-Sweeney 1993.",
+          "source_repairs": [
+            {
+              "kind": "decimal_transcription",
+              "angle_deg": 36,
+              "original_value": 89,
+              "corrected_value": 8.9,
+              "units": "1e-20 cm2/sr",
+              "reference": "Shyn and Sweeney, Phys. Rev. A 47, 1006 (1993)",
+              "doi": "10.1103/PhysRevA.47.1006",
+              "location": "Table I(b), p. 1007",
+              "verification": "visual inspection of the published table; the PDF text layer also omits these decimal points",
+              "source_pdf_sha256": "81ae455b82ba89b7a39d34364d10a7feb539f8bb3ac27070d699b226f17fc3c9"
+            }
+          ],
           "completion": {
             "model": "boundary_matched_elastic",
             "solid_angle_coverage": 0.9458465291882032,
-            "modeled_probability": 0.017672739337294262,
+            "modeled_probability": 0.03169844842765167,
             "moment_sensitivity_to_constant_caps": [
-              0.001115131863137308,
-              0.0012916543923731664
+              0.0011130395366446327,
+              0.0029832287762516334
             ]
           },
           "accepted": true
@@ -1249,7 +1275,7 @@
           "accepted": true
         }
       ],
-      "energy_rows": 132,
+      "energy_rows": 104,
       "angle_points": 181
     },
     {
