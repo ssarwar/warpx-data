@@ -1,3 +1,6 @@
+# energy_min_eV = 0
+# energy_max_eV = 1000000000
+# outside_energy_range = error
 # rbeq_model = elmolcs_b8643810
 # rbeq_normalization = positive_part
 # rbeq_target = O2

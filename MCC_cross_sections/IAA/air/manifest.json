@@ -1,0 +1,3219 @@
+{
+  "format": "warpx_iaa_air_v1",
+  "archive_sha256": "b864381086120fff37eb8c658dfcb0f150b80969cf9add626a38d89bab0a3c38",
+  "attachment_sha256": "884e84b94a523b50dcc71079c68db34af744996cf1f90c737fc800aa023abc1c",
+  "maximum_energy_eV": 1000000000.0,
+  "defaults": {
+    "ionization": "iaa_thesis_2023",
+    "dissociative_attachment": "iaa",
+    "three_body_attachment": "muroran",
+    "third_body": "O2"
+  },
+  "assumptions": [
+    "completed IAA; ground-state targets; neutral states are not evolved",
+    "existing elastic/rotation family is preserved",
+    "three-body stabilization uses O2 density, not total air density"
+  ],
+  "targets": {
+    "N2": {
+      "elastic": "N2/IAA/elastic.txt",
+      "elastic_dcs": "N2/IAA/elastic_dcs.txt",
+      "rotation": "N2/IAA/reciprocal_hybrid_300K/thermal_rotation.rot",
+      "master_energy_points": 14987,
+      "rounded_master_energy_points_float32": 14447,
+      "channels": [
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-1), Vibrational",
+          "source_line": 1763,
+          "loss_eV": 0.288,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v01",
+          "family": "vibrational",
+          "source_range_eV": [
+            0.288,
+            30.0
+          ],
+          "tabulated_onset_eV": 0.288,
+          "nominal_threshold_eV": 0.288,
+          "repairs": [
+            "Restore 20 eV, 1.225e-21 m2 and 30 eV, 2.66e-22 m2 from analytic-source file"
+          ],
+          "repair_source_file": "Data/cs/N2/Cross section.e-N2",
+          "repair_source_sha256": "462d82c4711eda0a7a0c09af78229044b3d93a1002eb1938e52d70afdb342acc",
+          "reaction": "E + N2 -> E + N2*(v=0-1)",
+          "cross_section": "N2/IAA/air/production/v01.txt",
+          "source_cross_section": "N2/IAA/air/source/v01.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -3.693695766203249,
+            "join_eV": 30.0,
+            "fit_range_eV": [
+              20.0,
+              30.0
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 2210,
+          "default": true,
+          "angular_model": "v01",
+          "differential_cross_section": "N2/IAA/air/angular/v01.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-2), Vibrational",
+          "source_line": 2514,
+          "loss_eV": 0.573,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v02",
+          "family": "vibrational",
+          "source_range_eV": [
+            0.573,
+            14.99
+          ],
+          "tabulated_onset_eV": 0.573,
+          "nominal_threshold_eV": 0.573,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-2)",
+          "cross_section": "N2/IAA/air/production/v02.txt",
+          "source_cross_section": "N2/IAA/air/source/v02.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -3.0271541719360457,
+            "join_eV": 14.99,
+            "fit_range_eV": [
+              14.91,
+              14.99
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 2172,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-3), Vibrational",
+          "source_line": 3249,
+          "loss_eV": 0.855,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v03",
+          "family": "vibrational",
+          "source_range_eV": [
+            1.21,
+            14.99
+          ],
+          "tabulated_onset_eV": 1.21,
+          "nominal_threshold_eV": 0.855,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-3)",
+          "cross_section": "N2/IAA/air/production/v03.txt",
+          "source_cross_section": "N2/IAA/air/source/v03.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -3.5094682501674543,
+            "join_eV": 14.99,
+            "fit_range_eV": [
+              14.91,
+              14.99
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 2277,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-4), Vibrational",
+          "source_line": 3952,
+          "loss_eV": 1.133,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v04",
+          "family": "vibrational",
+          "source_range_eV": [
+            1.42,
+            8.89
+          ],
+          "tabulated_onset_eV": 1.42,
+          "nominal_threshold_eV": 1.133,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-4)",
+          "cross_section": "N2/IAA/air/production/v04.txt",
+          "source_cross_section": "N2/IAA/air/source/v04.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 8.89
+          },
+          "points": 2304,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-5), Vibrational",
+          "source_line": 4713,
+          "loss_eV": 1.408,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v05",
+          "family": "vibrational",
+          "source_range_eV": [
+            1.63,
+            7.17
+          ],
+          "tabulated_onset_eV": 1.63,
+          "nominal_threshold_eV": 1.408,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-5)",
+          "cross_section": "N2/IAA/air/production/v05.txt",
+          "source_cross_section": "N2/IAA/air/source/v05.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 7.17
+          },
+          "points": 2464,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-6), Vibrational",
+          "source_line": 5281,
+          "loss_eV": 1.679,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v06",
+          "family": "vibrational",
+          "source_range_eV": [
+            1.81,
+            6.38
+          ],
+          "tabulated_onset_eV": 1.81,
+          "nominal_threshold_eV": 1.679,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-6)",
+          "cross_section": "N2/IAA/air/production/v06.txt",
+          "source_cross_section": "N2/IAA/air/source/v06.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 6.38
+          },
+          "points": 2623,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-7), Vibrational",
+          "source_line": 5752,
+          "loss_eV": 1.947,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v07",
+          "family": "vibrational",
+          "source_range_eV": [
+            1.97,
+            5.84
+          ],
+          "tabulated_onset_eV": 1.97,
+          "nominal_threshold_eV": 1.947,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-7)",
+          "cross_section": "N2/IAA/air/production/v07.txt",
+          "source_cross_section": "N2/IAA/air/source/v07.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 5.84
+          },
+          "points": 2815,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-8), Vibrational",
+          "source_line": 6153,
+          "loss_eV": 2.211,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v08",
+          "family": "vibrational",
+          "source_range_eV": [
+            2.211,
+            5.78
+          ],
+          "tabulated_onset_eV": 2.211,
+          "nominal_threshold_eV": 2.211,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-8)",
+          "cross_section": "N2/IAA/air/production/v08.txt",
+          "source_cross_section": "N2/IAA/air/source/v08.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 5.78
+          },
+          "points": 2859,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-9), Vibrational",
+          "source_line": 6524,
+          "loss_eV": 2.471,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v09",
+          "family": "vibrational",
+          "source_range_eV": [
+            2.471,
+            5.94
+          ],
+          "tabulated_onset_eV": 2.471,
+          "nominal_threshold_eV": 2.471,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-9)",
+          "cross_section": "N2/IAA/air/production/v09.txt",
+          "source_cross_section": "N2/IAA/air/source/v09.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 5.94
+          },
+          "points": 2848,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-10), Vibrational",
+          "source_line": 6885,
+          "loss_eV": 2.728,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v10",
+          "family": "vibrational",
+          "source_range_eV": [
+            2.728,
+            5.91
+          ],
+          "tabulated_onset_eV": 2.728,
+          "nominal_threshold_eV": 2.728,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-10)",
+          "cross_section": "N2/IAA/air/production/v10.txt",
+          "source_cross_section": "N2/IAA/air/source/v10.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 5.91
+          },
+          "points": 2634,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-11), Vibrational",
+          "source_line": 7218,
+          "loss_eV": 2.982,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v11",
+          "family": "vibrational",
+          "source_range_eV": [
+            2.982,
+            5.65
+          ],
+          "tabulated_onset_eV": 2.982,
+          "nominal_threshold_eV": 2.982,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-11)",
+          "cross_section": "N2/IAA/air/production/v11.txt",
+          "source_cross_section": "N2/IAA/air/source/v11.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 5.65
+          },
+          "points": 2298,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-12), Vibrational",
+          "source_line": 7499,
+          "loss_eV": 3.232,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v12",
+          "family": "vibrational",
+          "source_range_eV": [
+            3.232,
+            5.58
+          ],
+          "tabulated_onset_eV": 3.232,
+          "nominal_threshold_eV": 3.232,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-12)",
+          "cross_section": "N2/IAA/air/production/v12.txt",
+          "source_cross_section": "N2/IAA/air/source/v12.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 5.58
+          },
+          "points": 1822,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-13), Vibrational",
+          "source_line": 7748,
+          "loss_eV": 3.478,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v13",
+          "family": "vibrational",
+          "source_range_eV": [
+            3.478,
+            5.7
+          ],
+          "tabulated_onset_eV": 3.478,
+          "nominal_threshold_eV": 3.478,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-13)",
+          "cross_section": "N2/IAA/air/production/v13.txt",
+          "source_cross_section": "N2/IAA/air/source/v13.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 5.7
+          },
+          "points": 1426,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-14), Vibrational",
+          "source_line": 7985,
+          "loss_eV": 3.72,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v14",
+          "family": "vibrational",
+          "source_range_eV": [
+            3.72,
+            5.62
+          ],
+          "tabulated_onset_eV": 3.72,
+          "nominal_threshold_eV": 3.72,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-14)",
+          "cross_section": "N2/IAA/air/production/v14.txt",
+          "source_cross_section": "N2/IAA/air/source/v14.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 5.62
+          },
+          "points": 1030,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(v=0-15), Vibrational",
+          "source_line": 8189,
+          "loss_eV": 3.959,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v15",
+          "family": "vibrational",
+          "source_range_eV": [
+            3.96,
+            5.33
+          ],
+          "tabulated_onset_eV": 3.96,
+          "nominal_threshold_eV": 3.959,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(v=0-15)",
+          "cross_section": "N2/IAA/air/production/v15.txt",
+          "source_cross_section": "N2/IAA/air/source/v15.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 5.33
+          },
+          "points": 672,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "N2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(N + N), Dissociation",
+          "source_line": 8339,
+          "loss_eV": 9.7537,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "residual_dissociation",
+          "family": "dissociation",
+          "source_range_eV": [
+            12.308813,
+            1000.0
+          ],
+          "tabulated_onset_eV": 12.308813,
+          "nominal_threshold_eV": 9.7537,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(N + N)",
+          "cross_section": "N2/IAA/air/production/residual_dissociation.txt",
+          "source_cross_section": "N2/IAA/air/source/residual_dissociation.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -0.7198140527267335,
+            "join_eV": 1000.0,
+            "fit_range_eV": [
+              911.131989,
+              1000.0
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1230,
+          "default": true,
+          "angular_model": "normalized_elastic_IAA",
+          "differential_cross_section": "N2/IAA/elastic_dcs.txt"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(b1Πu), Electronic",
+          "source_line": 8541,
+          "loss_eV": 12.4997,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "b",
+          "family": "electronic",
+          "source_range_eV": [
+            12.4997,
+            1000.0
+          ],
+          "tabulated_onset_eV": 12.4997,
+          "nominal_threshold_eV": 12.4997,
+          "fitted_threshold_eV": 12.4997,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(b1Πu)",
+          "cross_section": "N2/IAA/air/production/b.txt",
+          "source_cross_section": "N2/IAA/air/source/b.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1014,
+          "default": true,
+          "angular_model": "b",
+          "differential_cross_section": "N2/IAA/air/angular/b.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(C3Πu), Electronic",
+          "source_line": 8754,
+          "loss_eV": 11.032,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "C",
+          "family": "electronic",
+          "source_range_eV": [
+            11.032,
+            1000.0
+          ],
+          "tabulated_onset_eV": 11.032,
+          "nominal_threshold_eV": 11.032,
+          "fitted_threshold_eV": 11.032,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(C3Πu)",
+          "cross_section": "N2/IAA/air/production/triplet_c.txt",
+          "source_cross_section": "N2/IAA/air/source/triplet_c.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1121,
+          "default": true,
+          "angular_model": "C",
+          "differential_cross_section": "N2/IAA/air/angular/triplet_c.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(a1Πg), Electronic",
+          "source_line": 8967,
+          "loss_eV": 8.549,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "a",
+          "family": "electronic",
+          "source_range_eV": [
+            8.549,
+            1000.0
+          ],
+          "tabulated_onset_eV": 8.549,
+          "nominal_threshold_eV": 8.549,
+          "fitted_threshold_eV": 8.549,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(a1Πg)",
+          "cross_section": "N2/IAA/air/production/a.txt",
+          "source_cross_section": "N2/IAA/air/source/a.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1318,
+          "default": true,
+          "angular_model": "a",
+          "differential_cross_section": "N2/IAA/air/angular/a.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(c'41Σu+), Electronic",
+          "source_line": 9180,
+          "loss_eV": 12.9344,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "c4_prime",
+          "family": "electronic",
+          "source_range_eV": [
+            12.9344,
+            1000.0
+          ],
+          "tabulated_onset_eV": 12.9344,
+          "nominal_threshold_eV": 12.9344,
+          "fitted_threshold_eV": 12.9344,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(c'41Σu+)",
+          "cross_section": "N2/IAA/air/production/c4_prime.txt",
+          "source_cross_section": "N2/IAA/air/source/c4_prime.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 920,
+          "default": true,
+          "angular_model": "c4_prime",
+          "differential_cross_section": "N2/IAA/air/angular/c4_prime.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(b'1Σu+), Electronic",
+          "source_line": 9393,
+          "loss_eV": 12.8535,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "b_prime",
+          "family": "electronic",
+          "source_range_eV": [
+            12.8535,
+            1000.0
+          ],
+          "tabulated_onset_eV": 12.8535,
+          "nominal_threshold_eV": 12.8535,
+          "fitted_threshold_eV": 12.8535,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(b'1Σu+)",
+          "cross_section": "N2/IAA/air/production/b_prime.txt",
+          "source_cross_section": "N2/IAA/air/source/b_prime.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 830,
+          "default": true,
+          "angular_model": "b_prime",
+          "differential_cross_section": "N2/IAA/air/angular/b_prime.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(B3Πg), Electronic",
+          "source_line": 9606,
+          "loss_eV": 7.353,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "B",
+          "family": "electronic",
+          "source_range_eV": [
+            7.353,
+            1000.0
+          ],
+          "tabulated_onset_eV": 7.353,
+          "nominal_threshold_eV": 7.353,
+          "fitted_threshold_eV": 7.353,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(B3Πg)",
+          "cross_section": "N2/IAA/air/production/triplet_b.txt",
+          "source_cross_section": "N2/IAA/air/source/triplet_b.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1291,
+          "default": true,
+          "angular_model": "B",
+          "differential_cross_section": "N2/IAA/air/angular/triplet_b.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(c31Πu), Electronic",
+          "source_line": 9819,
+          "loss_eV": 12.9115,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "c3",
+          "family": "electronic",
+          "source_range_eV": [
+            12.9115,
+            1000.0
+          ],
+          "tabulated_onset_eV": 12.9115,
+          "nominal_threshold_eV": 12.9115,
+          "fitted_threshold_eV": 12.9115,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(c31Πu)",
+          "cross_section": "N2/IAA/air/production/c3.txt",
+          "source_cross_section": "N2/IAA/air/source/c3.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 961,
+          "default": true,
+          "angular_model": "c3",
+          "differential_cross_section": "N2/IAA/air/angular/c3.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(W3Δu), Electronic",
+          "source_line": 10032,
+          "loss_eV": 7.362,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "W",
+          "family": "electronic",
+          "source_range_eV": [
+            7.362,
+            1000.0
+          ],
+          "tabulated_onset_eV": 7.362,
+          "nominal_threshold_eV": 7.362,
+          "fitted_threshold_eV": 7.362,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(W3Δu)",
+          "cross_section": "N2/IAA/air/production/triplet_w.txt",
+          "source_cross_section": "N2/IAA/air/source/triplet_w.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1296,
+          "default": true,
+          "angular_model": "W",
+          "differential_cross_section": "N2/IAA/air/angular/triplet_w.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(o31Πu), Electronic",
+          "source_line": 10245,
+          "loss_eV": 13.103,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "o3",
+          "family": "electronic",
+          "source_range_eV": [
+            13.103,
+            1000.0
+          ],
+          "tabulated_onset_eV": 13.103,
+          "nominal_threshold_eV": 13.103,
+          "fitted_threshold_eV": 13.103,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(o31Πu)",
+          "cross_section": "N2/IAA/air/production/o3.txt",
+          "source_cross_section": "N2/IAA/air/source/o3.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 772,
+          "default": true,
+          "angular_model": "o3",
+          "differential_cross_section": "N2/IAA/air/angular/o3.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(A3Σu+), Electronic",
+          "source_line": 10458,
+          "loss_eV": 6.169,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "A",
+          "family": "electronic",
+          "source_range_eV": [
+            6.169,
+            1000.0
+          ],
+          "tabulated_onset_eV": 6.169,
+          "nominal_threshold_eV": 6.169,
+          "fitted_threshold_eV": 6.169,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(A3Σu+)",
+          "cross_section": "N2/IAA/air/production/triplet_a.txt",
+          "source_cross_section": "N2/IAA/air/source/triplet_a.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1226,
+          "default": true,
+          "angular_model": "A",
+          "differential_cross_section": "N2/IAA/air/angular/triplet_a.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(B'3Σu-), Electronic",
+          "source_line": 10671,
+          "loss_eV": 8.165,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "B_prime",
+          "family": "electronic",
+          "source_range_eV": [
+            8.165,
+            1000.0
+          ],
+          "tabulated_onset_eV": 8.165,
+          "nominal_threshold_eV": 8.165,
+          "fitted_threshold_eV": 8.165,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(B'3Σu-)",
+          "cross_section": "N2/IAA/air/production/triplet_b_prime.txt",
+          "source_cross_section": "N2/IAA/air/source/triplet_b_prime.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1385,
+          "default": true,
+          "angular_model": "B_prime",
+          "differential_cross_section": "N2/IAA/air/angular/triplet_b_prime.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(a\"1Σg+), Electronic",
+          "source_line": 10884,
+          "loss_eV": 12.255,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "a_double_prime",
+          "family": "electronic",
+          "source_range_eV": [
+            12.255,
+            1000.0
+          ],
+          "tabulated_onset_eV": 12.255,
+          "nominal_threshold_eV": 12.255,
+          "fitted_threshold_eV": 12.255,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(a\"1Σg+)",
+          "cross_section": "N2/IAA/air/production/a_double_prime.txt",
+          "source_cross_section": "N2/IAA/air/source/a_double_prime.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1090,
+          "default": true,
+          "angular_model": "a_double_prime",
+          "differential_cross_section": "N2/IAA/air/angular/a_double_prime.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(a'1Σu-), Electronic",
+          "source_line": 11097,
+          "loss_eV": 8.398,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "a_prime",
+          "family": "electronic",
+          "source_range_eV": [
+            8.398,
+            1000.0
+          ],
+          "tabulated_onset_eV": 8.398,
+          "nominal_threshold_eV": 8.398,
+          "fitted_threshold_eV": 8.398,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(a'1Σu-)",
+          "cross_section": "N2/IAA/air/production/a_prime.txt",
+          "source_cross_section": "N2/IAA/air/source/a_prime.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1234,
+          "default": true,
+          "angular_model": "a_prime",
+          "differential_cross_section": "N2/IAA/air/angular/a_prime.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(w1Δu), Electronic",
+          "source_line": 11310,
+          "loss_eV": 8.895,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "w",
+          "family": "electronic",
+          "source_range_eV": [
+            8.895,
+            1000.0
+          ],
+          "tabulated_onset_eV": 8.895,
+          "nominal_threshold_eV": 8.895,
+          "fitted_threshold_eV": 8.895,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(w1Δu)",
+          "cross_section": "N2/IAA/air/production/w.txt",
+          "source_cross_section": "N2/IAA/air/source/w.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1463,
+          "default": true,
+          "angular_model": "w",
+          "differential_cross_section": "N2/IAA/air/angular/w.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(E3Σg+), Electronic",
+          "source_line": 11523,
+          "loss_eV": 11.877,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "E",
+          "family": "electronic",
+          "source_range_eV": [
+            11.877,
+            1000.0
+          ],
+          "tabulated_onset_eV": 11.877,
+          "nominal_threshold_eV": 11.877,
+          "fitted_threshold_eV": 11.877,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(E3Σg+)",
+          "cross_section": "N2/IAA/air/production/triplet_e.txt",
+          "source_cross_section": "N2/IAA/air/source/triplet_e.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1190,
+          "default": true,
+          "angular_model": "E",
+          "differential_cross_section": "N2/IAA/air/angular/triplet_e.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(G3Πu), Electronic",
+          "source_line": 11737,
+          "loss_eV": 12.8097,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "G",
+          "family": "electronic",
+          "source_range_eV": [
+            12.8097,
+            1000.0
+          ],
+          "tabulated_onset_eV": 12.8097,
+          "nominal_threshold_eV": 12.8097,
+          "fitted_threshold_eV": 12.8097,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(G3Πu)",
+          "cross_section": "N2/IAA/air/production/triplet_g.txt",
+          "source_cross_section": "N2/IAA/air/source/triplet_g.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1115,
+          "default": true,
+          "angular_model": "G",
+          "differential_cross_section": "N2/IAA/air/angular/triplet_g.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*(F3Πu), Electronic",
+          "source_line": 11950,
+          "loss_eV": 12.9849,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "F",
+          "family": "electronic",
+          "source_range_eV": [
+            12.9849,
+            1000.0
+          ],
+          "tabulated_onset_eV": 12.9849,
+          "nominal_threshold_eV": 12.9849,
+          "fitted_threshold_eV": 12.9849,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*(F3Πu)",
+          "cross_section": "N2/IAA/air/production/triplet_f.txt",
+          "source_cross_section": "N2/IAA/air/source/triplet_f.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 890,
+          "default": true,
+          "angular_model": "F",
+          "differential_cross_section": "N2/IAA/air/angular/triplet_f.angular"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*, Complementary",
+          "source_line": 12162,
+          "loss_eV": 7.0,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "complement_7",
+          "family": "complementary",
+          "source_range_eV": [
+            7.0,
+            11.0
+          ],
+          "tabulated_onset_eV": 7.0,
+          "nominal_threshold_eV": 7.0,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*",
+          "cross_section": "N2/IAA/air/production/complement_7.txt",
+          "source_cross_section": "N2/IAA/air/source/complement_7.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 11.0
+          },
+          "points": 184,
+          "default": true,
+          "angular_model": "normalized_elastic_IAA",
+          "differential_cross_section": "N2/IAA/elastic_dcs.txt"
+        },
+        {
+          "target": "N2",
+          "original_process": "E + N2 -> E + N2*, Complementary",
+          "source_line": 12191,
+          "loss_eV": 14.0,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "complement_14",
+          "family": "complementary",
+          "source_range_eV": [
+            14.0,
+            10000.0
+          ],
+          "tabulated_onset_eV": 14.0,
+          "nominal_threshold_eV": 14.0,
+          "repairs": [],
+          "reaction": "E + N2 -> E + N2*",
+          "cross_section": "N2/IAA/air/production/complement_14.txt",
+          "source_cross_section": "N2/IAA/air/source/complement_14.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -1.0,
+            "join_eV": 10000.0,
+            "fit_range_eV": [
+              7564.633276,
+              10000.0
+            ],
+            "assumption": "dipole-forbidden asymptote"
+          },
+          "points": 802,
+          "default": true,
+          "angular_model": "normalized_elastic_IAA",
+          "differential_cross_section": "N2/IAA/elastic_dcs.txt"
+        },
+        {
+          "id": "ionization_iaa_thesis_2023",
+          "type": "ionization",
+          "family": "ionization",
+          "cross_section": "IAA/RBEQ/N2_iaa_thesis_2023.txt",
+          "rbeq_model": "iaa_thesis_2023",
+          "rbeq_target": "N2",
+          "alternative_group": "ionization",
+          "loss_eV": 15.58,
+          "units": "m2",
+          "default": true
+        },
+        {
+          "id": "ionization_elmolcs_b8643810",
+          "type": "ionization",
+          "family": "ionization",
+          "cross_section": "IAA/RBEQ/N2_elmolcs_b8643810.txt",
+          "rbeq_model": "elmolcs_b8643810",
+          "rbeq_target": "N2",
+          "alternative_group": "ionization",
+          "loss_eV": 15.58,
+          "units": "m2",
+          "default": false
+        }
+      ]
+    },
+    "O2": {
+      "elastic": "O2/IAA/elastic.txt",
+      "elastic_dcs": "O2/IAA/elastic_dcs.txt",
+      "rotation": "O2/IAA/reciprocal_hybrid_300K/thermal_rotation.rot",
+      "master_energy_points": 20265,
+      "rounded_master_energy_points_float32": 20203,
+      "channels": [
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-1), Vibrational",
+          "source_line": 25070,
+          "loss_eV": 0.196,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v01",
+          "family": "vibrational",
+          "source_range_eV": [
+            0.196,
+            17.99
+          ],
+          "tabulated_onset_eV": 0.196,
+          "nominal_threshold_eV": 0.196,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-1)",
+          "cross_section": "O2/IAA/air/production/v01.txt",
+          "source_cross_section": "O2/IAA/air/source/v01.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -8.808156187018927,
+            "join_eV": 17.99,
+            "fit_range_eV": [
+              17.91,
+              17.99
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 4979,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-2), Vibrational",
+          "source_line": 25974,
+          "loss_eV": 0.388,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v02",
+          "family": "vibrational",
+          "source_range_eV": [
+            0.388,
+            17.98
+          ],
+          "tabulated_onset_eV": 0.388,
+          "nominal_threshold_eV": 0.388,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-2)",
+          "cross_section": "O2/IAA/air/production/v02.txt",
+          "source_cross_section": "O2/IAA/air/source/v02.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -12.525622322282192,
+            "join_eV": 17.98,
+            "fit_range_eV": [
+              17.9,
+              17.98
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 5624,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-3), Vibrational",
+          "source_line": 26868,
+          "loss_eV": 0.573,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v03",
+          "family": "vibrational",
+          "source_range_eV": [
+            0.573,
+            17.99
+          ],
+          "tabulated_onset_eV": 0.573,
+          "nominal_threshold_eV": 0.573,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-3)",
+          "cross_section": "O2/IAA/air/production/v03.txt",
+          "source_cross_section": "O2/IAA/air/source/v03.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -15.70113913757454,
+            "join_eV": 17.99,
+            "fit_range_eV": [
+              17.91,
+              17.99
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 7565,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-4), Vibrational",
+          "source_line": 27753,
+          "loss_eV": 0.756,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v04",
+          "family": "vibrational",
+          "source_range_eV": [
+            0.756,
+            17.99
+          ],
+          "tabulated_onset_eV": 0.756,
+          "nominal_threshold_eV": 0.756,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-4)",
+          "cross_section": "O2/IAA/air/production/v04.txt",
+          "source_cross_section": "O2/IAA/air/source/v04.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -18.4671367237143,
+            "join_eV": 17.99,
+            "fit_range_eV": [
+              17.91,
+              17.99
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 8707,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-5), Vibrational",
+          "source_line": 28629,
+          "loss_eV": 0.937,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v05",
+          "family": "vibrational",
+          "source_range_eV": [
+            0.937,
+            17.99
+          ],
+          "tabulated_onset_eV": 0.937,
+          "nominal_threshold_eV": 0.937,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-5)",
+          "cross_section": "O2/IAA/air/production/v05.txt",
+          "source_cross_section": "O2/IAA/air/source/v05.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -20.9331293625273,
+            "join_eV": 17.99,
+            "fit_range_eV": [
+              17.91,
+              17.99
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 8315,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-6), Vibrational",
+          "source_line": 29496,
+          "loss_eV": 1.117,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v06",
+          "family": "vibrational",
+          "source_range_eV": [
+            1.117,
+            18.99
+          ],
+          "tabulated_onset_eV": 1.117,
+          "nominal_threshold_eV": 1.117,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-6)",
+          "cross_section": "O2/IAA/air/production/v06.txt",
+          "source_cross_section": "O2/IAA/air/source/v06.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -22.987797074454424,
+            "join_eV": 18.99,
+            "fit_range_eV": [
+              18.91,
+              18.99
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 8524,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-7), Vibrational",
+          "source_line": 30404,
+          "loss_eV": 1.291,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v07",
+          "family": "vibrational",
+          "source_range_eV": [
+            1.291,
+            18.99
+          ],
+          "tabulated_onset_eV": 1.291,
+          "nominal_threshold_eV": 1.291,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-7)",
+          "cross_section": "O2/IAA/air/production/v07.txt",
+          "source_cross_section": "O2/IAA/air/source/v07.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -23.402510115077217,
+            "join_eV": 18.99,
+            "fit_range_eV": [
+              18.91,
+              18.99
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 8229,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-8), Vibrational",
+          "source_line": 31303,
+          "loss_eV": 1.461,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v08",
+          "family": "vibrational",
+          "source_range_eV": [
+            1.461,
+            18.98
+          ],
+          "tabulated_onset_eV": 1.461,
+          "nominal_threshold_eV": 1.461,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-8)",
+          "cross_section": "O2/IAA/air/production/v08.txt",
+          "source_cross_section": "O2/IAA/air/source/v08.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -23.022367407591226,
+            "join_eV": 18.98,
+            "fit_range_eV": [
+              18.9,
+              18.98
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 8241,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-9), Vibrational",
+          "source_line": 32193,
+          "loss_eV": 1.629,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v09",
+          "family": "vibrational",
+          "source_range_eV": [
+            1.629,
+            18.98
+          ],
+          "tabulated_onset_eV": 1.629,
+          "nominal_threshold_eV": 1.629,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-9)",
+          "cross_section": "O2/IAA/air/production/v09.txt",
+          "source_cross_section": "O2/IAA/air/source/v09.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -24.02933854633735,
+            "join_eV": 18.98,
+            "fit_range_eV": [
+              18.9,
+              18.98
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 7590,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-10), Vibrational",
+          "source_line": 33075,
+          "loss_eV": 1.796,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v10",
+          "family": "vibrational",
+          "source_range_eV": [
+            1.796,
+            18.99
+          ],
+          "tabulated_onset_eV": 1.796,
+          "nominal_threshold_eV": 1.796,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-10)",
+          "cross_section": "O2/IAA/air/production/v10.txt",
+          "source_cross_section": "O2/IAA/air/source/v10.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -25.71072017519986,
+            "join_eV": 18.99,
+            "fit_range_eV": [
+              18.91,
+              18.99
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 7243,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-11), Vibrational",
+          "source_line": 33949,
+          "loss_eV": 1.96,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v11",
+          "family": "vibrational",
+          "source_range_eV": [
+            1.96,
+            18.98
+          ],
+          "tabulated_onset_eV": 1.96,
+          "nominal_threshold_eV": 1.96,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-11)",
+          "cross_section": "O2/IAA/air/production/v11.txt",
+          "source_cross_section": "O2/IAA/air/source/v11.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -25.687800000688107,
+            "join_eV": 18.98,
+            "fit_range_eV": [
+              18.9,
+              18.98
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 6750,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-12), Vibrational",
+          "source_line": 34814,
+          "loss_eV": 2.122,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v12",
+          "family": "vibrational",
+          "source_range_eV": [
+            2.122,
+            19.82
+          ],
+          "tabulated_onset_eV": 2.122,
+          "nominal_threshold_eV": 2.122,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-12)",
+          "cross_section": "O2/IAA/air/production/v12.txt",
+          "source_cross_section": "O2/IAA/air/source/v12.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -27.37206656185683,
+            "join_eV": 19.82,
+            "fit_range_eV": [
+              19.74,
+              19.82
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 5579,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-13), Vibrational",
+          "source_line": 35713,
+          "loss_eV": 2.281,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v13",
+          "family": "vibrational",
+          "source_range_eV": [
+            2.281,
+            19.7
+          ],
+          "tabulated_onset_eV": 2.281,
+          "nominal_threshold_eV": 2.281,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-13)",
+          "cross_section": "O2/IAA/air/production/v13.txt",
+          "source_cross_section": "O2/IAA/air/source/v13.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 19.7
+          },
+          "points": 4651,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-14), Vibrational",
+          "source_line": 36598,
+          "loss_eV": 2.435,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v14",
+          "family": "vibrational",
+          "source_range_eV": [
+            2.45,
+            19.53
+          ],
+          "tabulated_onset_eV": 2.45,
+          "nominal_threshold_eV": 2.435,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-14)",
+          "cross_section": "O2/IAA/air/production/v14.txt",
+          "source_cross_section": "O2/IAA/air/source/v14.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -24.59062771459552,
+            "join_eV": 19.53,
+            "fit_range_eV": [
+              19.45,
+              19.53
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 4241,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-15), Vibrational",
+          "source_line": 37466,
+          "loss_eV": 2.587,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v15",
+          "family": "vibrational",
+          "source_range_eV": [
+            2.63,
+            19.43
+          ],
+          "tabulated_onset_eV": 2.63,
+          "nominal_threshold_eV": 2.587,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-15)",
+          "cross_section": "O2/IAA/air/production/v15.txt",
+          "source_cross_section": "O2/IAA/air/source/v15.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 19.43
+          },
+          "points": 3572,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-16), Vibrational",
+          "source_line": 38320,
+          "loss_eV": 2.735,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v16",
+          "family": "vibrational",
+          "source_range_eV": [
+            2.735,
+            19.41
+          ],
+          "tabulated_onset_eV": 2.735,
+          "nominal_threshold_eV": 2.735,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-16)",
+          "cross_section": "O2/IAA/air/production/v16.txt",
+          "source_cross_section": "O2/IAA/air/source/v16.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -25.984432838891856,
+            "join_eV": 19.41,
+            "fit_range_eV": [
+              19.33,
+              19.41
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 3146,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-17), Vibrational",
+          "source_line": 39168,
+          "loss_eV": 2.881,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v17",
+          "family": "vibrational",
+          "source_range_eV": [
+            2.881,
+            19.36
+          ],
+          "tabulated_onset_eV": 2.881,
+          "nominal_threshold_eV": 2.881,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-17)",
+          "cross_section": "O2/IAA/air/production/v17.txt",
+          "source_cross_section": "O2/IAA/air/source/v17.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 19.36
+          },
+          "points": 2784,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-18), Vibrational",
+          "source_line": 40006,
+          "loss_eV": 3.024,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v18",
+          "family": "vibrational",
+          "source_range_eV": [
+            3.05,
+            19.21
+          ],
+          "tabulated_onset_eV": 3.05,
+          "nominal_threshold_eV": 3.024,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-18)",
+          "cross_section": "O2/IAA/air/production/v18.txt",
+          "source_cross_section": "O2/IAA/air/source/v18.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 19.21
+          },
+          "points": 1918,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-19), Vibrational",
+          "source_line": 40828,
+          "loss_eV": 3.164,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v19",
+          "family": "vibrational",
+          "source_range_eV": [
+            3.18,
+            19.04
+          ],
+          "tabulated_onset_eV": 3.18,
+          "nominal_threshold_eV": 3.164,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-19)",
+          "cross_section": "O2/IAA/air/production/v19.txt",
+          "source_cross_section": "O2/IAA/air/source/v19.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -23.87133830102397,
+            "join_eV": 19.04,
+            "fit_range_eV": [
+              18.96,
+              19.04
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 2080,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-20), Vibrational",
+          "source_line": 41635,
+          "loss_eV": 3.301,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v20",
+          "family": "vibrational",
+          "source_range_eV": [
+            3.32,
+            19.06
+          ],
+          "tabulated_onset_eV": 3.32,
+          "nominal_threshold_eV": 3.301,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-20)",
+          "cross_section": "O2/IAA/air/production/v20.txt",
+          "source_cross_section": "O2/IAA/air/source/v20.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 19.06
+          },
+          "points": 1201,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-21), Vibrational",
+          "source_line": 42436,
+          "loss_eV": 3.436,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v21",
+          "family": "vibrational",
+          "source_range_eV": [
+            3.436,
+            19.09
+          ],
+          "tabulated_onset_eV": 3.436,
+          "nominal_threshold_eV": 3.436,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-21)",
+          "cross_section": "O2/IAA/air/production/v21.txt",
+          "source_cross_section": "O2/IAA/air/source/v21.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 19.09
+          },
+          "points": 1296,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-22), Vibrational",
+          "source_line": 43233,
+          "loss_eV": 3.568,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v22",
+          "family": "vibrational",
+          "source_range_eV": [
+            3.58,
+            19.0
+          ],
+          "tabulated_onset_eV": 3.58,
+          "nominal_threshold_eV": 3.568,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-22)",
+          "cross_section": "O2/IAA/air/production/v22.txt",
+          "source_cross_section": "O2/IAA/air/source/v22.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -22.186660793666476,
+            "join_eV": 19.0,
+            "fit_range_eV": [
+              18.92,
+              19.0
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1291,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-23), Vibrational",
+          "source_line": 44018,
+          "loss_eV": 3.696,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v23",
+          "family": "vibrational",
+          "source_range_eV": [
+            3.91,
+            18.83
+          ],
+          "tabulated_onset_eV": 3.91,
+          "nominal_threshold_eV": 3.696,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-23)",
+          "cross_section": "O2/IAA/air/production/v23.txt",
+          "source_cross_section": "O2/IAA/air/source/v23.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -23.621466183593057,
+            "join_eV": 18.83,
+            "fit_range_eV": [
+              18.75,
+              18.83
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1255,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-24), Vibrational",
+          "source_line": 44778,
+          "loss_eV": 3.821,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v24",
+          "family": "vibrational",
+          "source_range_eV": [
+            4.07,
+            18.69
+          ],
+          "tabulated_onset_eV": 4.07,
+          "nominal_threshold_eV": 3.821,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-24)",
+          "cross_section": "O2/IAA/air/production/v24.txt",
+          "source_cross_section": "O2/IAA/air/source/v24.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -23.140573941515797,
+            "join_eV": 18.69,
+            "fit_range_eV": [
+              18.61,
+              18.69
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1231,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-25), Vibrational",
+          "source_line": 45523,
+          "loss_eV": 3.942,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v25",
+          "family": "vibrational",
+          "source_range_eV": [
+            4.22,
+            18.66
+          ],
+          "tabulated_onset_eV": 4.22,
+          "nominal_threshold_eV": 3.942,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-25)",
+          "cross_section": "O2/IAA/air/production/v25.txt",
+          "source_cross_section": "O2/IAA/air/source/v25.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -22.286250943554,
+            "join_eV": 18.66,
+            "fit_range_eV": [
+              18.58,
+              18.66
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1219,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-26), Vibrational",
+          "source_line": 46259,
+          "loss_eV": 4.059,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v26",
+          "family": "vibrational",
+          "source_range_eV": [
+            4.33,
+            18.69
+          ],
+          "tabulated_onset_eV": 4.33,
+          "nominal_threshold_eV": 4.059,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-26)",
+          "cross_section": "O2/IAA/air/production/v26.txt",
+          "source_cross_section": "O2/IAA/air/source/v26.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -22.886130078343975,
+            "join_eV": 18.69,
+            "fit_range_eV": [
+              18.61,
+              18.69
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1177,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-27), Vibrational",
+          "source_line": 46991,
+          "loss_eV": 4.172,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v27",
+          "family": "vibrational",
+          "source_range_eV": [
+            4.44,
+            18.68
+          ],
+          "tabulated_onset_eV": 4.44,
+          "nominal_threshold_eV": 4.172,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-27)",
+          "cross_section": "O2/IAA/air/production/v27.txt",
+          "source_cross_section": "O2/IAA/air/source/v27.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 18.68
+          },
+          "points": 873,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-28), Vibrational",
+          "source_line": 47717,
+          "loss_eV": 4.28,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v28",
+          "family": "vibrational",
+          "source_range_eV": [
+            4.56,
+            18.58
+          ],
+          "tabulated_onset_eV": 4.56,
+          "nominal_threshold_eV": 4.28,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-28)",
+          "cross_section": "O2/IAA/air/production/v28.txt",
+          "source_cross_section": "O2/IAA/air/source/v28.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -21.21681999739052,
+            "join_eV": 18.58,
+            "fit_range_eV": [
+              18.5,
+              18.58
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1153,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-29), Vibrational",
+          "source_line": 48432,
+          "loss_eV": 4.382,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v29",
+          "family": "vibrational",
+          "source_range_eV": [
+            4.69,
+            18.41
+          ],
+          "tabulated_onset_eV": 4.69,
+          "nominal_threshold_eV": 4.382,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-29)",
+          "cross_section": "O2/IAA/air/production/v29.txt",
+          "source_cross_section": "O2/IAA/air/source/v29.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -19.911999172430466,
+            "join_eV": 18.41,
+            "fit_range_eV": [
+              18.33,
+              18.41
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1113,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-30), Vibrational",
+          "source_line": 49132,
+          "loss_eV": 4.476,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v30",
+          "family": "vibrational",
+          "source_range_eV": [
+            4.81,
+            18.25
+          ],
+          "tabulated_onset_eV": 4.81,
+          "nominal_threshold_eV": 4.476,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-30)",
+          "cross_section": "O2/IAA/air/production/v30.txt",
+          "source_cross_section": "O2/IAA/air/source/v30.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -21.381354807990952,
+            "join_eV": 18.25,
+            "fit_range_eV": [
+              18.17,
+              18.25
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1122,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-31), Vibrational",
+          "source_line": 49818,
+          "loss_eV": 4.565,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v31",
+          "family": "vibrational",
+          "source_range_eV": [
+            4.91,
+            18.19
+          ],
+          "tabulated_onset_eV": 4.91,
+          "nominal_threshold_eV": 4.565,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-31)",
+          "cross_section": "O2/IAA/air/production/v31.txt",
+          "source_cross_section": "O2/IAA/air/source/v31.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -23.159266552167875,
+            "join_eV": 18.19,
+            "fit_range_eV": [
+              18.11,
+              18.19
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1101,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-32), Vibrational",
+          "source_line": 50496,
+          "loss_eV": 4.651,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v32",
+          "family": "vibrational",
+          "source_range_eV": [
+            4.99,
+            18.19
+          ],
+          "tabulated_onset_eV": 4.99,
+          "nominal_threshold_eV": 4.651,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-32)",
+          "cross_section": "O2/IAA/air/production/v32.txt",
+          "source_cross_section": "O2/IAA/air/source/v32.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 18.19
+          },
+          "points": 805,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-33), Vibrational",
+          "source_line": 51170,
+          "loss_eV": 4.73,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v33",
+          "family": "vibrational",
+          "source_range_eV": [
+            5.08,
+            18.1
+          ],
+          "tabulated_onset_eV": 5.08,
+          "nominal_threshold_eV": 4.73,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-33)",
+          "cross_section": "O2/IAA/air/production/v33.txt",
+          "source_cross_section": "O2/IAA/air/source/v33.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 18.1
+          },
+          "points": 792,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-34), Vibrational",
+          "source_line": 51835,
+          "loss_eV": 4.794,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v34",
+          "family": "vibrational",
+          "source_range_eV": [
+            5.18,
+            17.86
+          ],
+          "tabulated_onset_eV": 5.18,
+          "nominal_threshold_eV": 4.794,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-34)",
+          "cross_section": "O2/IAA/air/production/v34.txt",
+          "source_cross_section": "O2/IAA/air/source/v34.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 17.86
+          },
+          "points": 749,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-35), Vibrational",
+          "source_line": 52483,
+          "loss_eV": 4.847,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v35",
+          "family": "vibrational",
+          "source_range_eV": [
+            5.24,
+            17.8
+          ],
+          "tabulated_onset_eV": 5.24,
+          "nominal_threshold_eV": 4.847,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-35)",
+          "cross_section": "O2/IAA/air/production/v35.txt",
+          "source_cross_section": "O2/IAA/air/source/v35.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -18.802328803672612,
+            "join_eV": 17.8,
+            "fit_range_eV": [
+              17.72,
+              17.8
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1094,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-36), Vibrational",
+          "source_line": 53125,
+          "loss_eV": 4.898,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v36",
+          "family": "vibrational",
+          "source_range_eV": [
+            5.32,
+            17.62
+          ],
+          "tabulated_onset_eV": 5.32,
+          "nominal_threshold_eV": 4.898,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-36)",
+          "cross_section": "O2/IAA/air/production/v36.txt",
+          "source_cross_section": "O2/IAA/air/source/v36.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 17.62
+          },
+          "points": 729,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-37), Vibrational",
+          "source_line": 53754,
+          "loss_eV": 4.938,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v37",
+          "family": "vibrational",
+          "source_range_eV": [
+            5.41,
+            17.25
+          ],
+          "tabulated_onset_eV": 5.41,
+          "nominal_threshold_eV": 4.938,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-37)",
+          "cross_section": "O2/IAA/air/production/v37.txt",
+          "source_cross_section": "O2/IAA/air/source/v37.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -18.29794651994497,
+            "join_eV": 17.25,
+            "fit_range_eV": [
+              17.17,
+              17.25
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1073,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-38), Vibrational",
+          "source_line": 54360,
+          "loss_eV": 4.96,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v38",
+          "family": "vibrational",
+          "source_range_eV": [
+            5.49,
+            16.89
+          ],
+          "tabulated_onset_eV": 5.49,
+          "nominal_threshold_eV": 4.96,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-38)",
+          "cross_section": "O2/IAA/air/production/v38.txt",
+          "source_cross_section": "O2/IAA/air/source/v38.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 16.89
+          },
+          "points": 660,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-39), Vibrational",
+          "source_line": 54944,
+          "loss_eV": 4.976,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v39",
+          "family": "vibrational",
+          "source_range_eV": [
+            5.64,
+            16.3
+          ],
+          "tabulated_onset_eV": 5.64,
+          "nominal_threshold_eV": 4.976,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-39)",
+          "cross_section": "O2/IAA/air/production/v39.txt",
+          "source_cross_section": "O2/IAA/air/source/v39.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 16.3
+          },
+          "points": 609,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-40), Vibrational",
+          "source_line": 55491,
+          "loss_eV": 4.987,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v40",
+          "family": "vibrational",
+          "source_range_eV": [
+            5.69,
+            16.17
+          ],
+          "tabulated_onset_eV": 5.69,
+          "nominal_threshold_eV": 4.987,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-40)",
+          "cross_section": "O2/IAA/air/production/v40.txt",
+          "source_cross_section": "O2/IAA/air/source/v40.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -23.845683002077664,
+            "join_eV": 16.17,
+            "fit_range_eV": [
+              16.09,
+              16.17
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1019,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-41), Vibrational",
+          "source_line": 56029,
+          "loss_eV": 4.994,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "v41",
+          "family": "vibrational",
+          "source_range_eV": [
+            5.82,
+            15.88
+          ],
+          "tabulated_onset_eV": 5.82,
+          "nominal_threshold_eV": 4.994,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-41)",
+          "cross_section": "O2/IAA/air/production/v41.txt",
+          "source_cross_section": "O2/IAA/air/source/v41.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 15.88
+          },
+          "points": 570,
+          "default": true,
+          "angular_model": "vibrational",
+          "differential_cross_section": "O2/IAA/air/angular/vibrational.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(v=0-None), Vibrational",
+          "source_line": 56546,
+          "loss_eV": 4.994,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "table",
+          "alternative_group": null,
+          "id": "vibrational_dissociation",
+          "family": "dissociation",
+          "source_range_eV": [
+            5.03,
+            17.99
+          ],
+          "tabulated_onset_eV": 5.03,
+          "nominal_threshold_eV": 4.994,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(v=0-None)",
+          "cross_section": "O2/IAA/air/production/vibrational_dissociation.txt",
+          "source_cross_section": "O2/IAA/air/source/vibrational_dissociation.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -4.727338025629805,
+            "join_eV": 17.99,
+            "fit_range_eV": [
+              17.91,
+              17.99
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1293,
+          "default": true,
+          "angular_model": "normalized_elastic_IAA",
+          "differential_cross_section": "O2/IAA/elastic_dcs.txt"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(SR), Electronic",
+          "source_line": 57208,
+          "loss_eV": 6.12,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "schumann_runge_onset",
+          "family": "electronic",
+          "source_range_eV": [
+            6.12,
+            10.0
+          ],
+          "tabulated_onset_eV": 6.12,
+          "nominal_threshold_eV": 6.12,
+          "fitted_threshold_eV": 6.12,
+          "repairs": [
+            "Partition one analytic total over 9.955581--10.213826 eV"
+          ],
+          "partition": "onset",
+          "reaction": "E + O2 -> E + O2*(SR)",
+          "cross_section": "O2/IAA/air/production/schumann_runge_onset.txt",
+          "source_cross_section": "O2/IAA/air/source/schumann_runge_onset.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 426,
+          "default": true,
+          "angular_model": "schumann_runge",
+          "differential_cross_section": "O2/IAA/air/angular/schumann_runge.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(SR), Electronic",
+          "source_line": 57241,
+          "loss_eV": 8.6,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "schumann_runge_bulk",
+          "family": "electronic",
+          "source_range_eV": [
+            10.0,
+            1000.0
+          ],
+          "tabulated_onset_eV": 10.0,
+          "nominal_threshold_eV": 6.12,
+          "fitted_threshold_eV": 6.12,
+          "repairs": [
+            "Partition one analytic total over 9.955581--10.213826 eV"
+          ],
+          "partition": "bulk",
+          "reaction": "E + O2 -> E + O2*(SR)",
+          "cross_section": "O2/IAA/air/production/schumann_runge_bulk.txt",
+          "source_cross_section": "O2/IAA/air/source/schumann_runge_bulk.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 604,
+          "default": true,
+          "angular_model": "schumann_runge",
+          "differential_cross_section": "O2/IAA/air/angular/schumann_runge.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(HC), Electronic",
+          "source_line": 57435,
+          "loss_eV": 6.0,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "herzberg",
+          "family": "electronic",
+          "source_range_eV": [
+            6.948626,
+            1000.0
+          ],
+          "tabulated_onset_eV": 6.948626,
+          "nominal_threshold_eV": 4.5,
+          "fitted_threshold_eV": 7.0,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(HC)",
+          "cross_section": "O2/IAA/air/production/herzberg.txt",
+          "source_cross_section": "O2/IAA/air/source/herzberg.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1281,
+          "default": true,
+          "angular_model": "herzberg",
+          "differential_cross_section": "O2/IAA/air/angular/herzberg.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(LB), Electronic",
+          "source_line": 57632,
+          "loss_eV": 9.97,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "longest_band",
+          "family": "electronic",
+          "source_range_eV": [
+            9.97,
+            1000.0
+          ],
+          "tabulated_onset_eV": 9.97,
+          "nominal_threshold_eV": 9.97,
+          "fitted_threshold_eV": 9.97,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(LB)",
+          "cross_section": "O2/IAA/air/production/longest_band.txt",
+          "source_cross_section": "O2/IAA/air/source/longest_band.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1009,
+          "default": true,
+          "angular_model": "longest_band",
+          "differential_cross_section": "O2/IAA/air/angular/longest_band.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(a1Δg), Electronic",
+          "source_line": 57845,
+          "loss_eV": 0.977,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "a",
+          "family": "electronic",
+          "source_range_eV": [
+            0.977,
+            1000.0
+          ],
+          "tabulated_onset_eV": 0.977,
+          "nominal_threshold_eV": 0.977,
+          "fitted_threshold_eV": 0.977,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(a1Δg)",
+          "cross_section": "O2/IAA/air/production/a.txt",
+          "source_cross_section": "O2/IAA/air/source/a.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1164,
+          "default": true,
+          "angular_model": "a",
+          "differential_cross_section": "O2/IAA/air/angular/a.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(b1Σg+), Electronic",
+          "source_line": 58058,
+          "loss_eV": 1.627,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "b",
+          "family": "electronic",
+          "source_range_eV": [
+            1.627,
+            1000.0
+          ],
+          "tabulated_onset_eV": 1.627,
+          "nominal_threshold_eV": 1.627,
+          "fitted_threshold_eV": 1.627,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(b1Σg+)",
+          "cross_section": "O2/IAA/air/production/b.txt",
+          "source_cross_section": "O2/IAA/air/source/b.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 1044,
+          "default": true,
+          "angular_model": "b",
+          "differential_cross_section": "O2/IAA/air/angular/b.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(2B), Electronic",
+          "source_line": 58271,
+          "loss_eV": 10.29,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "second_band",
+          "family": "electronic",
+          "source_range_eV": [
+            10.29,
+            1000.0
+          ],
+          "tabulated_onset_eV": 10.29,
+          "nominal_threshold_eV": 10.29,
+          "fitted_threshold_eV": 10.29,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(2B)",
+          "cross_section": "O2/IAA/air/production/second_band.txt",
+          "source_cross_section": "O2/IAA/air/source/second_band.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 829,
+          "default": true,
+          "angular_model": "second_band",
+          "differential_cross_section": "O2/IAA/air/angular/second_band.angular"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(?), Electronic",
+          "source_line": 58483,
+          "loss_eV": 11.0,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "excitation",
+          "model": "analytic",
+          "alternative_group": null,
+          "id": "complement_11",
+          "family": "complementary",
+          "source_range_eV": [
+            11.0,
+            1000.0
+          ],
+          "tabulated_onset_eV": 11.0,
+          "nominal_threshold_eV": 11.0,
+          "fitted_threshold_eV": 11.0,
+          "repairs": [],
+          "reaction": "E + O2 -> E + O2*(?)",
+          "cross_section": "O2/IAA/air/production/complement_11.txt",
+          "source_cross_section": "O2/IAA/air/source/complement_11.txt",
+          "continuation": {
+            "model": "source_analytic",
+            "maximum_eV": 1000000000.0
+          },
+          "points": 695,
+          "default": true,
+          "angular_model": "normalized_elastic_IAA",
+          "differential_cross_section": "O2/IAA/elastic_dcs.txt"
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> E + O2*(O-+O), Dissociative",
+          "source_line": 58695,
+          "loss_eV": 0.0,
+          "source_file": "Data/cs/Cross section.txt",
+          "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+          "units": "m2",
+          "type": "attachment",
+          "model": "table",
+          "alternative_group": "dissociative_attachment",
+          "id": "attachment_iaa",
+          "family": "attachment",
+          "source_range_eV": [
+            4.2,
+            17.99
+          ],
+          "tabulated_onset_eV": 4.2,
+          "nominal_threshold_eV": 0.0,
+          "repairs": [],
+          "reaction": "e + O2 -> O- + O",
+          "temperature_dependence": "No gas-temperature law is supplied by this effective source",
+          "cross_section": "O2/IAA/air/production/attachment_iaa.txt",
+          "source_cross_section": "O2/IAA/air/source/attachment_iaa.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -2.6934398848609664,
+            "join_eV": 17.99,
+            "fit_range_eV": [
+              17.91,
+              17.99
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1360,
+          "default": true
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> O2-, Attachment",
+          "source_line": 62,
+          "loss_eV": 0.0,
+          "id": "three_body_muroran",
+          "family": "attachment",
+          "type": "attachment",
+          "model": "table",
+          "units": "m5",
+          "third_body": "O2",
+          "alternative_group": "three_body_attachment",
+          "source_file": "O2_attachment.txt",
+          "source_sha256": "884e84b94a523b50dcc71079c68db34af744996cf1f90c737fc800aa023abc1c",
+          "conversion_factor": 1.0,
+          "repairs": [],
+          "tabulated_onset_eV": 0.0,
+          "nominal_threshold_eV": 0.0,
+          "source_range_eV": [
+            0.0,
+            0.5621
+          ],
+          "reaction": "e + O2 + O2 -> O2- + O2",
+          "temperature_dependence": "No gas-temperature law is supplied by this effective source",
+          "cross_section": "O2/IAA/air/production/three_body_muroran.txt",
+          "source_cross_section": "O2/IAA/air/source/three_body_muroran.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 0.5621
+          },
+          "points": 343,
+          "default": true
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> O-(2P) + O(3P), Attachment",
+          "source_line": 162,
+          "loss_eV": 0.0,
+          "id": "attachment_muroran",
+          "family": "attachment",
+          "type": "attachment",
+          "model": "table",
+          "units": "m2",
+          "third_body": null,
+          "alternative_group": "dissociative_attachment",
+          "source_file": "O2_attachment.txt",
+          "source_sha256": "884e84b94a523b50dcc71079c68db34af744996cf1f90c737fc800aa023abc1c",
+          "conversion_factor": 1.0,
+          "repairs": [],
+          "tabulated_onset_eV": 3.64,
+          "nominal_threshold_eV": 3.64,
+          "source_range_eV": [
+            3.64,
+            1000.0
+          ],
+          "reaction": "e + O2 -> O- + O",
+          "temperature_dependence": "No gas-temperature law is supplied by this effective source",
+          "cross_section": "O2/IAA/air/production/attachment_muroran.txt",
+          "source_cross_section": "O2/IAA/air/source/attachment_muroran.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -2.803396587451133,
+            "join_eV": 1000.0,
+            "fit_range_eV": [
+              169.82,
+              1000.0
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1170,
+          "default": false
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> O2-, Attachment",
+          "source_line": 83,
+          "loss_eV": 0.0,
+          "id": "three_body_phelps",
+          "family": "attachment",
+          "type": "attachment",
+          "model": "table",
+          "units": "m5",
+          "third_body": "O2",
+          "alternative_group": "three_body_attachment",
+          "source_file": "Data/cs/O2/others/Cross section (phelps).e-O2",
+          "source_sha256": "ae9bf4d461cd09ae2ff7c4370e075415e5a57eea774ecd89e3041d0e491be812",
+          "conversion_factor": 1e-06,
+          "repairs": [],
+          "tabulated_onset_eV": 0.0,
+          "nominal_threshold_eV": 0.0,
+          "source_range_eV": [
+            0.0,
+            10000.0
+          ],
+          "reaction": "e + O2 + O2 -> O2- + O2",
+          "temperature_dependence": "No gas-temperature law is supplied by this effective source",
+          "cross_section": "O2/IAA/air/production/three_body_phelps.txt",
+          "source_cross_section": "O2/IAA/air/source/three_body_phelps.txt",
+          "continuation": {
+            "model": "zero",
+            "join_eV": 10000.0
+          },
+          "points": 154,
+          "default": false
+        },
+        {
+          "target": "O2",
+          "original_process": "E + O2 -> O2-, Attachment",
+          "source_line": 71,
+          "loss_eV": 0.0,
+          "id": "three_body_biagi",
+          "family": "attachment",
+          "type": "attachment",
+          "model": "table",
+          "units": "m5",
+          "third_body": "O2",
+          "alternative_group": "three_body_attachment",
+          "source_file": "Data/cs/O2/others/Cross section (biagi).e-O2",
+          "source_sha256": "d70477a8736ae1f07349432ccf22351e3744c19cb5bc36611d0be2173185a2fc",
+          "conversion_factor": 1e-06,
+          "repairs": [],
+          "tabulated_onset_eV": 0.035,
+          "nominal_threshold_eV": 0.0,
+          "source_range_eV": [
+            0.035,
+            1000.0
+          ],
+          "reaction": "e + O2 + O2 -> O2- + O2",
+          "temperature_dependence": "No gas-temperature law is supplied by this effective source",
+          "cross_section": "O2/IAA/air/production/three_body_biagi.txt",
+          "source_cross_section": "O2/IAA/air/source/three_body_biagi.txt",
+          "continuation": {
+            "model": "endpoint_power_law",
+            "exponent": -1.4473312682744093,
+            "join_eV": 1000.0,
+            "fit_range_eV": [
+              0.5,
+              1000.0
+            ],
+            "assumption": "terminal decreasing source segment"
+          },
+          "points": 1136,
+          "default": false
+        },
+        {
+          "id": "ionization_iaa_thesis_2023",
+          "type": "ionization",
+          "family": "ionization",
+          "cross_section": "IAA/RBEQ/O2_iaa_thesis_2023.txt",
+          "rbeq_model": "iaa_thesis_2023",
+          "rbeq_target": "O2",
+          "alternative_group": "ionization",
+          "loss_eV": 12.07,
+          "units": "m2",
+          "default": true
+        },
+        {
+          "id": "ionization_elmolcs_b8643810",
+          "type": "ionization",
+          "family": "ionization",
+          "cross_section": "IAA/RBEQ/O2_elmolcs_b8643810.txt",
+          "rbeq_model": "elmolcs_b8643810",
+          "rbeq_target": "O2",
+          "alternative_group": "ionization",
+          "loss_eV": 12.07,
+          "units": "m2",
+          "default": false
+        }
+      ]
+    }
+  }
+}
