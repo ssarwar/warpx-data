@@ -1,0 +1,2012 @@
+{
+  "format": "warpx_iaa_gas_v1",
+  "archive_sha256": "b864381086120fff37eb8c658dfcb0f150b80969cf9add626a38d89bab0a3c38",
+  "attachment_sha256": "884e84b94a523b50dcc71079c68db34af744996cf1f90c737fc800aa023abc1c",
+  "maximum_energy_eV": 1000000000.0,
+  "defaults": {
+    "ionization": "iaa_thesis_2023",
+    "dissociative_attachment": "iaa",
+    "three_body_attachment": "muroran",
+    "third_body": "O2"
+  },
+  "assumptions": [
+    "completed IAA; ground-state targets; neutral states are not evolved",
+    "existing elastic/rotation family is preserved",
+    "three-body stabilization uses O2 density, not total air density"
+  ],
+  "target": "O2",
+  "elastic": "elastic/cross_section.txt",
+  "elastic_dcs": "elastic/differential_cross_section.txt",
+  "rotation": "rotational/elastic_rotation_300K/thermal_rotation.rot",
+  "master_energy_points": 20265,
+  "rounded_master_energy_points_float32": 20203,
+  "channels": [
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-1), Vibrational",
+      "source_line": 25070,
+      "loss_eV": 0.196,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v01",
+      "family": "vibrational",
+      "source_range_eV": [
+        0.196,
+        17.99
+      ],
+      "tabulated_onset_eV": 0.196,
+      "nominal_threshold_eV": 0.196,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-1)",
+      "cross_section": "vibrational/v0_to_v01.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v01.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -8.808156187018927,
+        "join_eV": 17.99,
+        "fit_range_eV": [
+          17.91,
+          17.99
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 4979,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-2), Vibrational",
+      "source_line": 25974,
+      "loss_eV": 0.388,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v02",
+      "family": "vibrational",
+      "source_range_eV": [
+        0.388,
+        17.98
+      ],
+      "tabulated_onset_eV": 0.388,
+      "nominal_threshold_eV": 0.388,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-2)",
+      "cross_section": "vibrational/v0_to_v02.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v02.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -12.525622322282192,
+        "join_eV": 17.98,
+        "fit_range_eV": [
+          17.9,
+          17.98
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 5624,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-3), Vibrational",
+      "source_line": 26868,
+      "loss_eV": 0.573,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v03",
+      "family": "vibrational",
+      "source_range_eV": [
+        0.573,
+        17.99
+      ],
+      "tabulated_onset_eV": 0.573,
+      "nominal_threshold_eV": 0.573,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-3)",
+      "cross_section": "vibrational/v0_to_v03.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v03.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -15.70113913757454,
+        "join_eV": 17.99,
+        "fit_range_eV": [
+          17.91,
+          17.99
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 7565,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-4), Vibrational",
+      "source_line": 27753,
+      "loss_eV": 0.756,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v04",
+      "family": "vibrational",
+      "source_range_eV": [
+        0.756,
+        17.99
+      ],
+      "tabulated_onset_eV": 0.756,
+      "nominal_threshold_eV": 0.756,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-4)",
+      "cross_section": "vibrational/v0_to_v04.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v04.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -18.4671367237143,
+        "join_eV": 17.99,
+        "fit_range_eV": [
+          17.91,
+          17.99
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 8707,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-5), Vibrational",
+      "source_line": 28629,
+      "loss_eV": 0.937,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v05",
+      "family": "vibrational",
+      "source_range_eV": [
+        0.937,
+        17.99
+      ],
+      "tabulated_onset_eV": 0.937,
+      "nominal_threshold_eV": 0.937,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-5)",
+      "cross_section": "vibrational/v0_to_v05.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v05.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -20.9331293625273,
+        "join_eV": 17.99,
+        "fit_range_eV": [
+          17.91,
+          17.99
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 8315,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-6), Vibrational",
+      "source_line": 29496,
+      "loss_eV": 1.117,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v06",
+      "family": "vibrational",
+      "source_range_eV": [
+        1.117,
+        18.99
+      ],
+      "tabulated_onset_eV": 1.117,
+      "nominal_threshold_eV": 1.117,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-6)",
+      "cross_section": "vibrational/v0_to_v06.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v06.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -22.987797074454424,
+        "join_eV": 18.99,
+        "fit_range_eV": [
+          18.91,
+          18.99
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 8524,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-7), Vibrational",
+      "source_line": 30404,
+      "loss_eV": 1.291,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v07",
+      "family": "vibrational",
+      "source_range_eV": [
+        1.291,
+        18.99
+      ],
+      "tabulated_onset_eV": 1.291,
+      "nominal_threshold_eV": 1.291,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-7)",
+      "cross_section": "vibrational/v0_to_v07.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v07.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -23.402510115077217,
+        "join_eV": 18.99,
+        "fit_range_eV": [
+          18.91,
+          18.99
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 8229,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-8), Vibrational",
+      "source_line": 31303,
+      "loss_eV": 1.461,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v08",
+      "family": "vibrational",
+      "source_range_eV": [
+        1.461,
+        18.98
+      ],
+      "tabulated_onset_eV": 1.461,
+      "nominal_threshold_eV": 1.461,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-8)",
+      "cross_section": "vibrational/v0_to_v08.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v08.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -23.022367407591226,
+        "join_eV": 18.98,
+        "fit_range_eV": [
+          18.9,
+          18.98
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 8241,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-9), Vibrational",
+      "source_line": 32193,
+      "loss_eV": 1.629,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v09",
+      "family": "vibrational",
+      "source_range_eV": [
+        1.629,
+        18.98
+      ],
+      "tabulated_onset_eV": 1.629,
+      "nominal_threshold_eV": 1.629,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-9)",
+      "cross_section": "vibrational/v0_to_v09.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v09.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -24.02933854633735,
+        "join_eV": 18.98,
+        "fit_range_eV": [
+          18.9,
+          18.98
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 7590,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-10), Vibrational",
+      "source_line": 33075,
+      "loss_eV": 1.796,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v10",
+      "family": "vibrational",
+      "source_range_eV": [
+        1.796,
+        18.99
+      ],
+      "tabulated_onset_eV": 1.796,
+      "nominal_threshold_eV": 1.796,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-10)",
+      "cross_section": "vibrational/v0_to_v10.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v10.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -25.71072017519986,
+        "join_eV": 18.99,
+        "fit_range_eV": [
+          18.91,
+          18.99
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 7243,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-11), Vibrational",
+      "source_line": 33949,
+      "loss_eV": 1.96,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v11",
+      "family": "vibrational",
+      "source_range_eV": [
+        1.96,
+        18.98
+      ],
+      "tabulated_onset_eV": 1.96,
+      "nominal_threshold_eV": 1.96,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-11)",
+      "cross_section": "vibrational/v0_to_v11.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v11.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -25.687800000688107,
+        "join_eV": 18.98,
+        "fit_range_eV": [
+          18.9,
+          18.98
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 6750,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-12), Vibrational",
+      "source_line": 34814,
+      "loss_eV": 2.122,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v12",
+      "family": "vibrational",
+      "source_range_eV": [
+        2.122,
+        19.82
+      ],
+      "tabulated_onset_eV": 2.122,
+      "nominal_threshold_eV": 2.122,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-12)",
+      "cross_section": "vibrational/v0_to_v12.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v12.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -27.37206656185683,
+        "join_eV": 19.82,
+        "fit_range_eV": [
+          19.74,
+          19.82
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 5579,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-13), Vibrational",
+      "source_line": 35713,
+      "loss_eV": 2.281,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v13",
+      "family": "vibrational",
+      "source_range_eV": [
+        2.281,
+        19.7
+      ],
+      "tabulated_onset_eV": 2.281,
+      "nominal_threshold_eV": 2.281,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-13)",
+      "cross_section": "vibrational/v0_to_v13.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v13.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 19.7
+      },
+      "points": 4651,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-14), Vibrational",
+      "source_line": 36598,
+      "loss_eV": 2.435,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v14",
+      "family": "vibrational",
+      "source_range_eV": [
+        2.45,
+        19.53
+      ],
+      "tabulated_onset_eV": 2.45,
+      "nominal_threshold_eV": 2.435,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-14)",
+      "cross_section": "vibrational/v0_to_v14.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v14.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -24.59062771459552,
+        "join_eV": 19.53,
+        "fit_range_eV": [
+          19.45,
+          19.53
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 4241,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-15), Vibrational",
+      "source_line": 37466,
+      "loss_eV": 2.587,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v15",
+      "family": "vibrational",
+      "source_range_eV": [
+        2.63,
+        19.43
+      ],
+      "tabulated_onset_eV": 2.63,
+      "nominal_threshold_eV": 2.587,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-15)",
+      "cross_section": "vibrational/v0_to_v15.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v15.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 19.43
+      },
+      "points": 3572,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-16), Vibrational",
+      "source_line": 38320,
+      "loss_eV": 2.735,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v16",
+      "family": "vibrational",
+      "source_range_eV": [
+        2.735,
+        19.41
+      ],
+      "tabulated_onset_eV": 2.735,
+      "nominal_threshold_eV": 2.735,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-16)",
+      "cross_section": "vibrational/v0_to_v16.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v16.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -25.984432838891856,
+        "join_eV": 19.41,
+        "fit_range_eV": [
+          19.33,
+          19.41
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 3146,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-17), Vibrational",
+      "source_line": 39168,
+      "loss_eV": 2.881,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v17",
+      "family": "vibrational",
+      "source_range_eV": [
+        2.881,
+        19.36
+      ],
+      "tabulated_onset_eV": 2.881,
+      "nominal_threshold_eV": 2.881,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-17)",
+      "cross_section": "vibrational/v0_to_v17.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v17.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 19.36
+      },
+      "points": 2784,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-18), Vibrational",
+      "source_line": 40006,
+      "loss_eV": 3.024,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v18",
+      "family": "vibrational",
+      "source_range_eV": [
+        3.05,
+        19.21
+      ],
+      "tabulated_onset_eV": 3.05,
+      "nominal_threshold_eV": 3.024,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-18)",
+      "cross_section": "vibrational/v0_to_v18.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v18.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 19.21
+      },
+      "points": 1918,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-19), Vibrational",
+      "source_line": 40828,
+      "loss_eV": 3.164,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v19",
+      "family": "vibrational",
+      "source_range_eV": [
+        3.18,
+        19.04
+      ],
+      "tabulated_onset_eV": 3.18,
+      "nominal_threshold_eV": 3.164,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-19)",
+      "cross_section": "vibrational/v0_to_v19.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v19.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -23.87133830102397,
+        "join_eV": 19.04,
+        "fit_range_eV": [
+          18.96,
+          19.04
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 2080,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-20), Vibrational",
+      "source_line": 41635,
+      "loss_eV": 3.301,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v20",
+      "family": "vibrational",
+      "source_range_eV": [
+        3.32,
+        19.06
+      ],
+      "tabulated_onset_eV": 3.32,
+      "nominal_threshold_eV": 3.301,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-20)",
+      "cross_section": "vibrational/v0_to_v20.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v20.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 19.06
+      },
+      "points": 1201,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-21), Vibrational",
+      "source_line": 42436,
+      "loss_eV": 3.436,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v21",
+      "family": "vibrational",
+      "source_range_eV": [
+        3.436,
+        19.09
+      ],
+      "tabulated_onset_eV": 3.436,
+      "nominal_threshold_eV": 3.436,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-21)",
+      "cross_section": "vibrational/v0_to_v21.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v21.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 19.09
+      },
+      "points": 1296,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-22), Vibrational",
+      "source_line": 43233,
+      "loss_eV": 3.568,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v22",
+      "family": "vibrational",
+      "source_range_eV": [
+        3.58,
+        19.0
+      ],
+      "tabulated_onset_eV": 3.58,
+      "nominal_threshold_eV": 3.568,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-22)",
+      "cross_section": "vibrational/v0_to_v22.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v22.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -22.186660793666476,
+        "join_eV": 19.0,
+        "fit_range_eV": [
+          18.92,
+          19.0
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1291,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-23), Vibrational",
+      "source_line": 44018,
+      "loss_eV": 3.696,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v23",
+      "family": "vibrational",
+      "source_range_eV": [
+        3.91,
+        18.83
+      ],
+      "tabulated_onset_eV": 3.91,
+      "nominal_threshold_eV": 3.696,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-23)",
+      "cross_section": "vibrational/v0_to_v23.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v23.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -23.621466183593057,
+        "join_eV": 18.83,
+        "fit_range_eV": [
+          18.75,
+          18.83
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1255,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-24), Vibrational",
+      "source_line": 44778,
+      "loss_eV": 3.821,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v24",
+      "family": "vibrational",
+      "source_range_eV": [
+        4.07,
+        18.69
+      ],
+      "tabulated_onset_eV": 4.07,
+      "nominal_threshold_eV": 3.821,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-24)",
+      "cross_section": "vibrational/v0_to_v24.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v24.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -23.140573941515797,
+        "join_eV": 18.69,
+        "fit_range_eV": [
+          18.61,
+          18.69
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1231,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-25), Vibrational",
+      "source_line": 45523,
+      "loss_eV": 3.942,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v25",
+      "family": "vibrational",
+      "source_range_eV": [
+        4.22,
+        18.66
+      ],
+      "tabulated_onset_eV": 4.22,
+      "nominal_threshold_eV": 3.942,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-25)",
+      "cross_section": "vibrational/v0_to_v25.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v25.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -22.286250943554,
+        "join_eV": 18.66,
+        "fit_range_eV": [
+          18.58,
+          18.66
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1219,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-26), Vibrational",
+      "source_line": 46259,
+      "loss_eV": 4.059,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v26",
+      "family": "vibrational",
+      "source_range_eV": [
+        4.33,
+        18.69
+      ],
+      "tabulated_onset_eV": 4.33,
+      "nominal_threshold_eV": 4.059,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-26)",
+      "cross_section": "vibrational/v0_to_v26.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v26.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -22.886130078343975,
+        "join_eV": 18.69,
+        "fit_range_eV": [
+          18.61,
+          18.69
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1177,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-27), Vibrational",
+      "source_line": 46991,
+      "loss_eV": 4.172,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v27",
+      "family": "vibrational",
+      "source_range_eV": [
+        4.44,
+        18.68
+      ],
+      "tabulated_onset_eV": 4.44,
+      "nominal_threshold_eV": 4.172,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-27)",
+      "cross_section": "vibrational/v0_to_v27.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v27.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 18.68
+      },
+      "points": 873,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-28), Vibrational",
+      "source_line": 47717,
+      "loss_eV": 4.28,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v28",
+      "family": "vibrational",
+      "source_range_eV": [
+        4.56,
+        18.58
+      ],
+      "tabulated_onset_eV": 4.56,
+      "nominal_threshold_eV": 4.28,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-28)",
+      "cross_section": "vibrational/v0_to_v28.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v28.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -21.21681999739052,
+        "join_eV": 18.58,
+        "fit_range_eV": [
+          18.5,
+          18.58
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1153,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-29), Vibrational",
+      "source_line": 48432,
+      "loss_eV": 4.382,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v29",
+      "family": "vibrational",
+      "source_range_eV": [
+        4.69,
+        18.41
+      ],
+      "tabulated_onset_eV": 4.69,
+      "nominal_threshold_eV": 4.382,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-29)",
+      "cross_section": "vibrational/v0_to_v29.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v29.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -19.911999172430466,
+        "join_eV": 18.41,
+        "fit_range_eV": [
+          18.33,
+          18.41
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1113,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-30), Vibrational",
+      "source_line": 49132,
+      "loss_eV": 4.476,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v30",
+      "family": "vibrational",
+      "source_range_eV": [
+        4.81,
+        18.25
+      ],
+      "tabulated_onset_eV": 4.81,
+      "nominal_threshold_eV": 4.476,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-30)",
+      "cross_section": "vibrational/v0_to_v30.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v30.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -21.381354807990952,
+        "join_eV": 18.25,
+        "fit_range_eV": [
+          18.17,
+          18.25
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1122,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-31), Vibrational",
+      "source_line": 49818,
+      "loss_eV": 4.565,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v31",
+      "family": "vibrational",
+      "source_range_eV": [
+        4.91,
+        18.19
+      ],
+      "tabulated_onset_eV": 4.91,
+      "nominal_threshold_eV": 4.565,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-31)",
+      "cross_section": "vibrational/v0_to_v31.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v31.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -23.159266552167875,
+        "join_eV": 18.19,
+        "fit_range_eV": [
+          18.11,
+          18.19
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1101,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-32), Vibrational",
+      "source_line": 50496,
+      "loss_eV": 4.651,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v32",
+      "family": "vibrational",
+      "source_range_eV": [
+        4.99,
+        18.19
+      ],
+      "tabulated_onset_eV": 4.99,
+      "nominal_threshold_eV": 4.651,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-32)",
+      "cross_section": "vibrational/v0_to_v32.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v32.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 18.19
+      },
+      "points": 805,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-33), Vibrational",
+      "source_line": 51170,
+      "loss_eV": 4.73,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v33",
+      "family": "vibrational",
+      "source_range_eV": [
+        5.08,
+        18.1
+      ],
+      "tabulated_onset_eV": 5.08,
+      "nominal_threshold_eV": 4.73,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-33)",
+      "cross_section": "vibrational/v0_to_v33.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v33.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 18.1
+      },
+      "points": 792,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-34), Vibrational",
+      "source_line": 51835,
+      "loss_eV": 4.794,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v34",
+      "family": "vibrational",
+      "source_range_eV": [
+        5.18,
+        17.86
+      ],
+      "tabulated_onset_eV": 5.18,
+      "nominal_threshold_eV": 4.794,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-34)",
+      "cross_section": "vibrational/v0_to_v34.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v34.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 17.86
+      },
+      "points": 749,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-35), Vibrational",
+      "source_line": 52483,
+      "loss_eV": 4.847,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v35",
+      "family": "vibrational",
+      "source_range_eV": [
+        5.24,
+        17.8
+      ],
+      "tabulated_onset_eV": 5.24,
+      "nominal_threshold_eV": 4.847,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-35)",
+      "cross_section": "vibrational/v0_to_v35.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v35.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -18.802328803672612,
+        "join_eV": 17.8,
+        "fit_range_eV": [
+          17.72,
+          17.8
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1094,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-36), Vibrational",
+      "source_line": 53125,
+      "loss_eV": 4.898,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v36",
+      "family": "vibrational",
+      "source_range_eV": [
+        5.32,
+        17.62
+      ],
+      "tabulated_onset_eV": 5.32,
+      "nominal_threshold_eV": 4.898,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-36)",
+      "cross_section": "vibrational/v0_to_v36.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v36.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 17.62
+      },
+      "points": 729,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-37), Vibrational",
+      "source_line": 53754,
+      "loss_eV": 4.938,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v37",
+      "family": "vibrational",
+      "source_range_eV": [
+        5.41,
+        17.25
+      ],
+      "tabulated_onset_eV": 5.41,
+      "nominal_threshold_eV": 4.938,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-37)",
+      "cross_section": "vibrational/v0_to_v37.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v37.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -18.29794651994497,
+        "join_eV": 17.25,
+        "fit_range_eV": [
+          17.17,
+          17.25
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1073,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-38), Vibrational",
+      "source_line": 54360,
+      "loss_eV": 4.96,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v38",
+      "family": "vibrational",
+      "source_range_eV": [
+        5.49,
+        16.89
+      ],
+      "tabulated_onset_eV": 5.49,
+      "nominal_threshold_eV": 4.96,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-38)",
+      "cross_section": "vibrational/v0_to_v38.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v38.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 16.89
+      },
+      "points": 660,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-39), Vibrational",
+      "source_line": 54944,
+      "loss_eV": 4.976,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v39",
+      "family": "vibrational",
+      "source_range_eV": [
+        5.64,
+        16.3
+      ],
+      "tabulated_onset_eV": 5.64,
+      "nominal_threshold_eV": 4.976,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-39)",
+      "cross_section": "vibrational/v0_to_v39.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v39.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 16.3
+      },
+      "points": 609,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-40), Vibrational",
+      "source_line": 55491,
+      "loss_eV": 4.987,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v40",
+      "family": "vibrational",
+      "source_range_eV": [
+        5.69,
+        16.17
+      ],
+      "tabulated_onset_eV": 5.69,
+      "nominal_threshold_eV": 4.987,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-40)",
+      "cross_section": "vibrational/v0_to_v40.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v40.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -23.845683002077664,
+        "join_eV": 16.17,
+        "fit_range_eV": [
+          16.09,
+          16.17
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1019,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-41), Vibrational",
+      "source_line": 56029,
+      "loss_eV": 4.994,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "v41",
+      "family": "vibrational",
+      "source_range_eV": [
+        5.82,
+        15.88
+      ],
+      "tabulated_onset_eV": 5.82,
+      "nominal_threshold_eV": 4.994,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-41)",
+      "cross_section": "vibrational/v0_to_v41.txt",
+      "source_cross_section": "vibrational/source_bounded/v0_to_v41.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 15.88
+      },
+      "points": 570,
+      "default": true,
+      "angular_model": "vibrational",
+      "differential_cross_section": "vibrational/angular/shared_bound_states.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(v=0-None), Vibrational",
+      "source_line": 56546,
+      "loss_eV": 4.994,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "table",
+      "alternative_group": null,
+      "id": "vibrational_dissociation",
+      "family": "dissociation",
+      "source_range_eV": [
+        5.03,
+        17.99
+      ],
+      "tabulated_onset_eV": 5.03,
+      "nominal_threshold_eV": 4.994,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(v=0-None)",
+      "cross_section": "dissociation/vibrational_dissociation.txt",
+      "source_cross_section": "dissociation/source_bounded/vibrational_dissociation.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -4.727338025629805,
+        "join_eV": 17.99,
+        "fit_range_eV": [
+          17.91,
+          17.99
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1293,
+      "default": true,
+      "angular_model": "normalized_elastic_IAA",
+      "differential_cross_section": "elastic/differential_cross_section.txt"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(SR), Electronic",
+      "source_line": 57208,
+      "loss_eV": 6.12,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "analytic",
+      "alternative_group": null,
+      "id": "schumann_runge_onset",
+      "family": "electronic",
+      "source_range_eV": [
+        6.12,
+        10.0
+      ],
+      "tabulated_onset_eV": 6.12,
+      "nominal_threshold_eV": 6.12,
+      "fitted_threshold_eV": 6.12,
+      "repairs": [
+        "Partition one analytic total over 9.955581--10.213826 eV"
+      ],
+      "partition": "onset",
+      "reaction": "E + O2 -> E + O2*(SR)",
+      "cross_section": "electronic/schumann_runge_6.12_eV.txt",
+      "source_cross_section": "electronic/source_bounded/schumann_runge_6.12_eV.txt",
+      "continuation": {
+        "model": "source_analytic",
+        "maximum_eV": 1000000000.0
+      },
+      "points": 426,
+      "default": true,
+      "angular_model": "schumann_runge",
+      "differential_cross_section": "electronic/angular/schumann_runge.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(SR), Electronic",
+      "source_line": 57241,
+      "loss_eV": 8.6,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "analytic",
+      "alternative_group": null,
+      "id": "schumann_runge_bulk",
+      "family": "electronic",
+      "source_range_eV": [
+        10.0,
+        1000.0
+      ],
+      "tabulated_onset_eV": 10.0,
+      "nominal_threshold_eV": 6.12,
+      "fitted_threshold_eV": 6.12,
+      "repairs": [
+        "Partition one analytic total over 9.955581--10.213826 eV"
+      ],
+      "partition": "bulk",
+      "reaction": "E + O2 -> E + O2*(SR)",
+      "cross_section": "electronic/schumann_runge_8.60_eV.txt",
+      "source_cross_section": "electronic/source_bounded/schumann_runge_8.60_eV.txt",
+      "continuation": {
+        "model": "source_analytic",
+        "maximum_eV": 1000000000.0
+      },
+      "points": 604,
+      "default": true,
+      "angular_model": "schumann_runge",
+      "differential_cross_section": "electronic/angular/schumann_runge.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(HC), Electronic",
+      "source_line": 57435,
+      "loss_eV": 6.0,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "analytic",
+      "alternative_group": null,
+      "id": "herzberg",
+      "family": "electronic",
+      "source_range_eV": [
+        6.948626,
+        1000.0
+      ],
+      "tabulated_onset_eV": 6.948626,
+      "nominal_threshold_eV": 4.5,
+      "fitted_threshold_eV": 7.0,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(HC)",
+      "cross_section": "electronic/herzberg_continuum.txt",
+      "source_cross_section": "electronic/source_bounded/herzberg_continuum.txt",
+      "continuation": {
+        "model": "source_analytic",
+        "maximum_eV": 1000000000.0
+      },
+      "points": 1281,
+      "default": true,
+      "angular_model": "herzberg",
+      "differential_cross_section": "electronic/angular/herzberg_continuum.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(LB), Electronic",
+      "source_line": 57632,
+      "loss_eV": 9.97,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "analytic",
+      "alternative_group": null,
+      "id": "longest_band",
+      "family": "electronic",
+      "source_range_eV": [
+        9.97,
+        1000.0
+      ],
+      "tabulated_onset_eV": 9.97,
+      "nominal_threshold_eV": 9.97,
+      "fitted_threshold_eV": 9.97,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(LB)",
+      "cross_section": "electronic/longest_band.txt",
+      "source_cross_section": "electronic/source_bounded/longest_band.txt",
+      "continuation": {
+        "model": "source_analytic",
+        "maximum_eV": 1000000000.0
+      },
+      "points": 1009,
+      "default": true,
+      "angular_model": "longest_band",
+      "differential_cross_section": "electronic/angular/longest_band.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(a1Δg), Electronic",
+      "source_line": 57845,
+      "loss_eV": 0.977,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "analytic",
+      "alternative_group": null,
+      "id": "a",
+      "family": "electronic",
+      "source_range_eV": [
+        0.977,
+        1000.0
+      ],
+      "tabulated_onset_eV": 0.977,
+      "nominal_threshold_eV": 0.977,
+      "fitted_threshold_eV": 0.977,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(a1Δg)",
+      "cross_section": "electronic/a_1Delta_g.txt",
+      "source_cross_section": "electronic/source_bounded/a_1Delta_g.txt",
+      "continuation": {
+        "model": "source_analytic",
+        "maximum_eV": 1000000000.0
+      },
+      "points": 1164,
+      "default": true,
+      "angular_model": "a",
+      "differential_cross_section": "electronic/angular/a_1Delta_g.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(b1Σg+), Electronic",
+      "source_line": 58058,
+      "loss_eV": 1.627,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "analytic",
+      "alternative_group": null,
+      "id": "b",
+      "family": "electronic",
+      "source_range_eV": [
+        1.627,
+        1000.0
+      ],
+      "tabulated_onset_eV": 1.627,
+      "nominal_threshold_eV": 1.627,
+      "fitted_threshold_eV": 1.627,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(b1Σg+)",
+      "cross_section": "electronic/b_1Sigma_g_plus.txt",
+      "source_cross_section": "electronic/source_bounded/b_1Sigma_g_plus.txt",
+      "continuation": {
+        "model": "source_analytic",
+        "maximum_eV": 1000000000.0
+      },
+      "points": 1044,
+      "default": true,
+      "angular_model": "b",
+      "differential_cross_section": "electronic/angular/b_1Sigma_g_plus.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(2B), Electronic",
+      "source_line": 58271,
+      "loss_eV": 10.29,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "analytic",
+      "alternative_group": null,
+      "id": "second_band",
+      "family": "electronic",
+      "source_range_eV": [
+        10.29,
+        1000.0
+      ],
+      "tabulated_onset_eV": 10.29,
+      "nominal_threshold_eV": 10.29,
+      "fitted_threshold_eV": 10.29,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(2B)",
+      "cross_section": "electronic/second_band.txt",
+      "source_cross_section": "electronic/source_bounded/second_band.txt",
+      "continuation": {
+        "model": "source_analytic",
+        "maximum_eV": 1000000000.0
+      },
+      "points": 829,
+      "default": true,
+      "angular_model": "second_band",
+      "differential_cross_section": "electronic/angular/second_band.angular"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(?), Electronic",
+      "source_line": 58483,
+      "loss_eV": 11.0,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "excitation",
+      "model": "analytic",
+      "alternative_group": null,
+      "id": "complement_11",
+      "family": "complementary",
+      "source_range_eV": [
+        11.0,
+        1000.0
+      ],
+      "tabulated_onset_eV": 11.0,
+      "nominal_threshold_eV": 11.0,
+      "fitted_threshold_eV": 11.0,
+      "repairs": [],
+      "reaction": "E + O2 -> E + O2*(?)",
+      "cross_section": "electronic/complement_11_eV.txt",
+      "source_cross_section": "electronic/source_bounded/complement_11_eV.txt",
+      "continuation": {
+        "model": "source_analytic",
+        "maximum_eV": 1000000000.0
+      },
+      "points": 695,
+      "default": true,
+      "angular_model": "normalized_elastic_IAA",
+      "differential_cross_section": "elastic/differential_cross_section.txt"
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> E + O2*(O-+O), Dissociative",
+      "source_line": 58695,
+      "loss_eV": 0.0,
+      "source_file": "Data/cs/Cross section.txt",
+      "source_sha256": "d335e31801831099da8025b64afe8c7e218ade100b518ec290f7d5ba4358ae8c",
+      "units": "m2",
+      "type": "attachment",
+      "model": "table",
+      "alternative_group": "dissociative_attachment",
+      "id": "attachment_iaa",
+      "family": "attachment",
+      "source_range_eV": [
+        4.2,
+        17.99
+      ],
+      "tabulated_onset_eV": 4.2,
+      "nominal_threshold_eV": 0.0,
+      "repairs": [],
+      "reaction": "e + O2 -> O- + O",
+      "temperature_dependence": "No gas-temperature law is supplied by this effective source",
+      "cross_section": "attachment/dissociative_iaa.txt",
+      "source_cross_section": "attachment/source_bounded/dissociative_iaa.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -2.6934398848609664,
+        "join_eV": 17.99,
+        "fit_range_eV": [
+          17.91,
+          17.99
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1360,
+      "default": true
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> O2-, Attachment",
+      "source_line": 62,
+      "loss_eV": 0.0,
+      "id": "three_body_muroran",
+      "family": "attachment",
+      "type": "attachment",
+      "model": "table",
+      "units": "m5",
+      "third_body": "O2",
+      "alternative_group": "three_body_attachment",
+      "source_file": "O2_attachment.txt",
+      "source_sha256": "884e84b94a523b50dcc71079c68db34af744996cf1f90c737fc800aa023abc1c",
+      "conversion_factor": 1.0,
+      "repairs": [],
+      "tabulated_onset_eV": 0.0,
+      "nominal_threshold_eV": 0.0,
+      "source_range_eV": [
+        0.0,
+        0.5621
+      ],
+      "reaction": "e + O2 + O2 -> O2- + O2",
+      "temperature_dependence": "No gas-temperature law is supplied by this effective source",
+      "cross_section": "attachment/three_body_muroran.txt",
+      "source_cross_section": "attachment/source_bounded/three_body_muroran.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 0.5621
+      },
+      "points": 343,
+      "default": true
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> O-(2P) + O(3P), Attachment",
+      "source_line": 162,
+      "loss_eV": 0.0,
+      "id": "attachment_muroran",
+      "family": "attachment",
+      "type": "attachment",
+      "model": "table",
+      "units": "m2",
+      "third_body": null,
+      "alternative_group": "dissociative_attachment",
+      "source_file": "O2_attachment.txt",
+      "source_sha256": "884e84b94a523b50dcc71079c68db34af744996cf1f90c737fc800aa023abc1c",
+      "conversion_factor": 1.0,
+      "repairs": [],
+      "tabulated_onset_eV": 3.64,
+      "nominal_threshold_eV": 3.64,
+      "source_range_eV": [
+        3.64,
+        1000.0
+      ],
+      "reaction": "e + O2 -> O- + O",
+      "temperature_dependence": "No gas-temperature law is supplied by this effective source",
+      "cross_section": "attachment/dissociative_muroran.txt",
+      "source_cross_section": "attachment/source_bounded/dissociative_muroran.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -2.803396587451133,
+        "join_eV": 1000.0,
+        "fit_range_eV": [
+          169.82,
+          1000.0
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1170,
+      "default": false
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> O2-, Attachment",
+      "source_line": 83,
+      "loss_eV": 0.0,
+      "id": "three_body_phelps",
+      "family": "attachment",
+      "type": "attachment",
+      "model": "table",
+      "units": "m5",
+      "third_body": "O2",
+      "alternative_group": "three_body_attachment",
+      "source_file": "Data/cs/O2/others/Cross section (phelps).e-O2",
+      "source_sha256": "ae9bf4d461cd09ae2ff7c4370e075415e5a57eea774ecd89e3041d0e491be812",
+      "conversion_factor": 1e-06,
+      "repairs": [],
+      "tabulated_onset_eV": 0.0,
+      "nominal_threshold_eV": 0.0,
+      "source_range_eV": [
+        0.0,
+        10000.0
+      ],
+      "reaction": "e + O2 + O2 -> O2- + O2",
+      "temperature_dependence": "No gas-temperature law is supplied by this effective source",
+      "cross_section": "attachment/three_body_phelps.txt",
+      "source_cross_section": "attachment/source_bounded/three_body_phelps.txt",
+      "continuation": {
+        "model": "zero",
+        "join_eV": 10000.0
+      },
+      "points": 154,
+      "default": false
+    },
+    {
+      "target": "O2",
+      "original_process": "E + O2 -> O2-, Attachment",
+      "source_line": 71,
+      "loss_eV": 0.0,
+      "id": "three_body_biagi",
+      "family": "attachment",
+      "type": "attachment",
+      "model": "table",
+      "units": "m5",
+      "third_body": "O2",
+      "alternative_group": "three_body_attachment",
+      "source_file": "Data/cs/O2/others/Cross section (biagi).e-O2",
+      "source_sha256": "d70477a8736ae1f07349432ccf22351e3744c19cb5bc36611d0be2173185a2fc",
+      "conversion_factor": 1e-06,
+      "repairs": [],
+      "tabulated_onset_eV": 0.035,
+      "nominal_threshold_eV": 0.0,
+      "source_range_eV": [
+        0.035,
+        1000.0
+      ],
+      "reaction": "e + O2 + O2 -> O2- + O2",
+      "temperature_dependence": "No gas-temperature law is supplied by this effective source",
+      "cross_section": "attachment/three_body_biagi.txt",
+      "source_cross_section": "attachment/source_bounded/three_body_biagi.txt",
+      "continuation": {
+        "model": "endpoint_power_law",
+        "exponent": -1.4473312682744093,
+        "join_eV": 1000.0,
+        "fit_range_eV": [
+          0.5,
+          1000.0
+        ],
+        "assumption": "terminal decreasing source segment"
+      },
+      "points": 1136,
+      "default": false
+    },
+    {
+      "id": "ionization_iaa_thesis_2023",
+      "type": "ionization",
+      "family": "ionization",
+      "cross_section": "ionization/rbeq_iaa_thesis_2023.txt",
+      "rbeq_model": "iaa_thesis_2023",
+      "rbeq_target": "O2",
+      "alternative_group": "ionization",
+      "loss_eV": 12.07,
+      "units": "m2",
+      "default": true
+    },
+    {
+      "id": "ionization_elmolcs_b8643810",
+      "type": "ionization",
+      "family": "ionization",
+      "cross_section": "ionization/rbeq_elmolcs_b8643810.txt",
+      "rbeq_model": "elmolcs_b8643810",
+      "rbeq_target": "O2",
+      "alternative_group": "ionization",
+      "loss_eV": 12.07,
+      "units": "m2",
+      "default": false
+    }
+  ]
+}

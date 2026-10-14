@@ -1,0 +1,5 @@
+WARPX_EXCITATION_ANGULAR_V1
+N2
+E_3Sigma_g_plus_pdf.txt
+../../elastic/differential_cross_section.txt
+11.877000000000001 200

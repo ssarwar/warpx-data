@@ -1,0 +1,1543 @@
+{
+  "format": "warpx_iaa_angular_sources_v1",
+  "archive_sha256": "b864381086120fff37eb8c658dfcb0f150b80969cf9add626a38d89bab0a3c38",
+  "thesis": "Schmalzried 2023, section 11.3.2, equation 11.40",
+  "vibrational_transition_eV": [
+    20,
+    40
+  ],
+  "minimum_angles": 8,
+  "minimum_solid_angle_coverage": 0.75,
+  "maximum_angular_gap_degrees": 20,
+  "maximum_completion_probability": 0.5,
+  "target": "O2",
+  "family": "electronic",
+  "profiles": [
+    {
+      "profile": "schumann_runge",
+      "file_stem": "schumann_runge",
+      "active_range_eV": [
+        11.25,
+        83.33333333333333
+      ],
+      "reference_energy_interpolation": "linear",
+      "runtime_energy_interpolation": "logarithmic",
+      "transition": "smoothstep_log_energy",
+      "rows": [
+        {
+          "original_process": "E + O2 -> e + O2(SR), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(SR), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Schumann-Runge Continuum | Error : 18 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-18 cm²/sr)",
+          "line": 1725,
+          "energy_eV": 15.0,
+          "angles_deg": [
+            15.0,
+            20.0,
+            30.0,
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            110.0,
+            120.0,
+            130.0
+          ],
+          "values": [
+            27.26,
+            21.57,
+            13.14,
+            7.234,
+            3.313,
+            3.217,
+            3.133,
+            2.858,
+            2.879,
+            2.879,
+            2.43,
+            2.269,
+            2.281
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.8043567179878038,
+            "modeled_probability": 0.2388728831264773,
+            "moment_sensitivity_to_constant_caps": [
+              0.029770189912049105,
+              0.02850779498964204
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(SR), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(SR), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Schumann-Runge Continuum | Error : 18 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-18 cm²/sr)",
+          "line": 1725,
+          "energy_eV": 20.0,
+          "angles_deg": [
+            10.0,
+            15.0,
+            20.0,
+            30.0,
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            110.0,
+            120.0,
+            130.0
+          ],
+          "values": [
+            53.82,
+            38.8,
+            30.69,
+            10.13,
+            4.556,
+            3.033,
+            3.346,
+            3.299,
+            3.153,
+            3.036,
+            2.397,
+            2.108,
+            2.081,
+            2.639
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.8137976813493737,
+            "modeled_probability": 0.23564673144270576,
+            "moment_sensitivity_to_constant_caps": [
+              0.06018169076645191,
+              0.0278176211315836
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(SR), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(SR), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Schumann-Runge Continuum | Error : 18 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-18 cm²/sr)",
+          "line": 1725,
+          "energy_eV": 30.0,
+          "angles_deg": [
+            15.0,
+            20.0,
+            30.0,
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            110.0,
+            120.0,
+            130.0
+          ],
+          "values": [
+            45.14,
+            23.17,
+            5.757,
+            3.01,
+            1.98,
+            2.432,
+            2.287,
+            2.143,
+            1.584,
+            1.31,
+            1.35,
+            1.753,
+            1.922
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.8043567179878038,
+            "modeled_probability": 0.3940347978598055,
+            "moment_sensitivity_to_constant_caps": [
+              0.03804377880948852,
+              0.054606323679152934
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(SR), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(SR), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Schumann-Runge Continuum | Error : 18 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-18 cm²/sr)",
+          "line": 1725,
+          "energy_eV": 50.0,
+          "angles_deg": [
+            5.0,
+            10.0,
+            15.0,
+            20.0,
+            30.0,
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            110.0,
+            120.0,
+            130.0
+          ],
+          "values": [
+            314.6,
+            86.8,
+            31.57,
+            12.06,
+            3.561,
+            2.113,
+            1.928,
+            1.465,
+            0.931,
+            0.755,
+            0.654,
+            0.663,
+            0.751,
+            0.889,
+            1.291
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.8194911538891425,
+            "modeled_probability": 0.2531669443646223,
+            "moment_sensitivity_to_constant_caps": [
+              0.04984514397076671,
+              0.004372233786225012
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(SR), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(SR), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Schumann-Runge Continuum | Error : 18 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-18 cm²/sr)",
+          "line": 1725,
+          "energy_eV": 100.0,
+          "angles_deg": [
+            3.1,
+            4.1,
+            5.1,
+            6.1,
+            8.1,
+            10.1,
+            15.1
+          ],
+          "values": [
+            804.5,
+            551.7,
+            388.6,
+            269.1,
+            136.1,
+            70.15,
+            17.04
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "accepted": false
+        },
+        {
+          "original_process": "E + O2 -> e + O2(SR), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(SR), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Schumann-Runge Continuum | Error : 18 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-18 cm²/sr)",
+          "line": 1725,
+          "energy_eV": 200.0,
+          "angles_deg": [
+            2.14,
+            3.14,
+            4.14,
+            5.14,
+            7.14,
+            9.14,
+            14.14
+          ],
+          "values": [
+            981.0,
+            522.0,
+            308.7,
+            181.8,
+            83.01,
+            37.0,
+            5.205
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "accepted": false
+        }
+      ],
+      "energy_rows": 99,
+      "angle_points": 181,
+      "profile_file": "electronic/angular/schumann_runge_pdf.txt",
+      "descriptor_file": "electronic/angular/schumann_runge.angular"
+    },
+    {
+      "profile": "herzberg",
+      "file_stem": "herzberg_continuum",
+      "active_range_eV": [
+        6.666666666666667,
+        45.0
+      ],
+      "reference_energy_interpolation": "linear",
+      "runtime_energy_interpolation": "logarithmic",
+      "transition": "smoothstep_log_energy",
+      "rows": [
+        {
+          "original_process": "E + O2 -> e + O2(HC), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(HC), Inelastic\nPARAM.:  E = (10,15,20,30) eV  \nCOMMENT: Shyn&Sweeney (2000) | Herzberg Pseudo-continuum c+A+A' | Error: 24 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 10 eV  | 15 eV | 20 eV | 30 eV  DCS\n        (deg)  | (1e-20 cm²/sr) | (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)",
+          "line": 1432,
+          "energy_eV": 10.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            54.5,
+            70.8,
+            88.4,
+            94.9,
+            101.3,
+            102.0,
+            111.3,
+            95.0,
+            108.7,
+            106.2,
+            109.5,
+            117.6,
+            116.1
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.05776903595845989,
+            "moment_sensitivity_to_constant_caps": [
+              0.0003166379107787865,
+              0.002673459592313109
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(HC), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(HC), Inelastic\nPARAM.:  E = (10,15,20,30) eV  \nCOMMENT: Shyn&Sweeney (2000) | Herzberg Pseudo-continuum c+A+A' | Error: 24 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 10 eV  | 15 eV | 20 eV | 30 eV  DCS\n        (deg)  | (1e-20 cm²/sr) | (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)",
+          "line": 1432,
+          "energy_eV": 15.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            28.5,
+            32.6,
+            35.9,
+            44.8,
+            55.7,
+            59.7,
+            54.2,
+            53.9,
+            65.6,
+            74.6,
+            77.3,
+            90.0,
+            82.1
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.0696043022633653,
+            "moment_sensitivity_to_constant_caps": [
+              0.0031762464745392354,
+              0.005547738917844141
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(HC), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(HC), Inelastic\nPARAM.:  E = (10,15,20,30) eV  \nCOMMENT: Shyn&Sweeney (2000) | Herzberg Pseudo-continuum c+A+A' | Error: 24 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 10 eV  | 15 eV | 20 eV | 30 eV  DCS\n        (deg)  | (1e-20 cm²/sr) | (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)",
+          "line": 1432,
+          "energy_eV": 20.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            19.5,
+            24.0,
+            28.5,
+            25.3,
+            22.7,
+            21.3,
+            22.3,
+            22.4,
+            31.8,
+            35.3,
+            45.5,
+            52.5,
+            54.8
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.0926707673323147,
+            "moment_sensitivity_to_constant_caps": [
+              0.004778204168441181,
+              0.008314087519794403
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(HC), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(HC), Inelastic\nPARAM.:  E = (10,15,20,30) eV  \nCOMMENT: Shyn&Sweeney (2000) | Herzberg Pseudo-continuum c+A+A' | Error: 24 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 10 eV  | 15 eV | 20 eV | 30 eV  DCS\n        (deg)  | (1e-20 cm²/sr) | (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)",
+          "line": 1432,
+          "energy_eV": 30.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            7.7,
+            7.4,
+            7.8,
+            6.9,
+            5.8,
+            5.5,
+            6.9,
+            8.4,
+            10.7,
+            13.5,
+            16.0,
+            19.1,
+            19.2
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.09988094403640421,
+            "moment_sensitivity_to_constant_caps": [
+              0.0039603698654178945,
+              0.00934401302741515
+            ]
+          },
+          "accepted": true
+        }
+      ],
+      "energy_rows": 107,
+      "angle_points": 181,
+      "profile_file": "electronic/angular/herzberg_continuum_pdf.txt",
+      "descriptor_file": "electronic/angular/herzberg_continuum.angular"
+    },
+    {
+      "profile": "longest_band",
+      "file_stem": "longest_band",
+      "active_range_eV": [
+        11.25,
+        83.33333333333333
+      ],
+      "reference_energy_interpolation": "linear",
+      "runtime_energy_interpolation": "logarithmic",
+      "transition": "smoothstep_log_energy",
+      "rows": [
+        {
+          "original_process": "E + O2 -> e + O2(LB), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(LB), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Longest Band | Error : 19 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-19 cm²/sr)",
+          "line": 1764,
+          "energy_eV": 15.0,
+          "angles_deg": [
+            15.0,
+            20.0,
+            30.0,
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            110.0,
+            120.0,
+            130.0
+          ],
+          "values": [
+            17.19,
+            15.45,
+            13.28,
+            9.43,
+            5.275,
+            3.949,
+            3.68,
+            3.065,
+            2.87,
+            2.78,
+            2.819,
+            2.826,
+            3.096
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.8043567179878038,
+            "modeled_probability": 0.2254006613887869,
+            "moment_sensitivity_to_constant_caps": [
+              0.04220642386998078,
+              0.03028512204075342
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(LB), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(LB), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Longest Band | Error : 19 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-19 cm²/sr)",
+          "line": 1764,
+          "energy_eV": 20.0,
+          "angles_deg": [
+            10.0,
+            15.0,
+            20.0,
+            30.0,
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            110.0,
+            120.0,
+            130.0
+          ],
+          "values": [
+            32.27,
+            25.19,
+            17.71,
+            9.472,
+            4.47,
+            2.696,
+            2.918,
+            3.198,
+            3.004,
+            2.699,
+            2.833,
+            2.272,
+            1.917,
+            1.963
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.8137976813493737,
+            "modeled_probability": 0.2035371581378527,
+            "moment_sensitivity_to_constant_caps": [
+              0.05429471081275714,
+              0.030041277856201646
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(LB), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(LB), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Longest Band | Error : 19 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-19 cm²/sr)",
+          "line": 1764,
+          "energy_eV": 30.0,
+          "angles_deg": [
+            15.0,
+            20.0,
+            30.0,
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            110.0,
+            120.0,
+            130.0
+          ],
+          "values": [
+            35.55,
+            21.94,
+            6.598,
+            2.425,
+            1.768,
+            2.86,
+            3.062,
+            3.016,
+            2.131,
+            1.681,
+            1.652,
+            2.101,
+            2.714
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.8043567179878038,
+            "modeled_probability": 0.37469152759379354,
+            "moment_sensitivity_to_constant_caps": [
+              0.05729266899134794,
+              0.060876041402976255
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(LB), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(LB), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Longest Band | Error : 19 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-19 cm²/sr)",
+          "line": 1764,
+          "energy_eV": 50.0,
+          "angles_deg": [
+            5.0,
+            10.0,
+            15.0,
+            20.0,
+            30.0,
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            110.0,
+            120.0,
+            130.0
+          ],
+          "values": [
+            99.82,
+            51.38,
+            21.65,
+            10.87,
+            2.791,
+            1.091,
+            1.972,
+            1.798,
+            1.349,
+            0.961,
+            0.569,
+            0.491,
+            0.777,
+            0.98,
+            1.608
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.8194911538891425,
+            "modeled_probability": 0.24367485220156695,
+            "moment_sensitivity_to_constant_caps": [
+              0.08398349924044009,
+              0.013736732416522394
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(LB), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(LB), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Longest Band | Error : 19 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-19 cm²/sr)",
+          "line": 1764,
+          "energy_eV": 100.0,
+          "angles_deg": [
+            3.1,
+            4.1,
+            5.1,
+            6.1,
+            8.1,
+            10.1,
+            15.1
+          ],
+          "values": [
+            273.8,
+            216.1,
+            160.3,
+            126.4,
+            77.7,
+            46.96,
+            17.0
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "accepted": false
+        },
+        {
+          "original_process": "E + O2 -> e + O2(LB), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(LB), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Longest Band | Error : 19 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-19 cm²/sr)",
+          "line": 1764,
+          "energy_eV": 200.0,
+          "angles_deg": [
+            2.14,
+            3.14,
+            4.14,
+            5.14,
+            7.14,
+            9.14,
+            14.14
+          ],
+          "values": [
+            383.2,
+            223.0,
+            135.0,
+            103.8,
+            60.27,
+            35.38,
+            5.799
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "accepted": false
+        }
+      ],
+      "energy_rows": 82,
+      "angle_points": 181,
+      "profile_file": "electronic/angular/longest_band_pdf.txt",
+      "descriptor_file": "electronic/angular/longest_band.angular"
+    },
+    {
+      "profile": "a",
+      "file_stem": "a_1Delta_g",
+      "active_range_eV": [
+        3.5714285714285716,
+        26.666666666666668
+      ],
+      "reference_energy_interpolation": "linear",
+      "runtime_energy_interpolation": "logarithmic",
+      "transition": "smoothstep_log_energy",
+      "rows": [
+        {
+          "original_process": "E + O2 -> e + O2(a1DELg), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(a1DELg), Inelastic\nPARAM.:  E = (5,7,10,15,20) eV  \nCOMMENT: Shyn&Sweeney (1993) | Error: 16 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 5 eV  | 7 eV | 10 eV | 15 eV | 20 eV  DCS\n        (deg)  | (1e-19 cm²/sr) | (1e-19 cm²/sr)| (1e-19 cm²/sr)| (1e-19 cm²/sr)| (1e-19 cm²/sr)",
+          "line": 1304,
+          "energy_eV": 5.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            9.9,
+            9.5,
+            7.8,
+            5.8,
+            5.3,
+            5.7,
+            5.7,
+            6.2,
+            6.1,
+            4.9,
+            5.3,
+            6.3,
+            6.1
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.0593592030479994,
+            "moment_sensitivity_to_constant_caps": [
+              0.0006385665461266917,
+              0.0013164117278796617
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(a1DELg), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(a1DELg), Inelastic\nPARAM.:  E = (5,7,10,15,20) eV  \nCOMMENT: Shyn&Sweeney (1993) | Error: 16 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 5 eV  | 7 eV | 10 eV | 15 eV | 20 eV  DCS\n        (deg)  | (1e-19 cm²/sr) | (1e-19 cm²/sr)| (1e-19 cm²/sr)| (1e-19 cm²/sr)| (1e-19 cm²/sr)",
+          "line": 1304,
+          "energy_eV": 7.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            12.3,
+            11.0,
+            9.3,
+            6.9,
+            5.8,
+            6.4,
+            6.5,
+            7.4,
+            7.9,
+            8.6,
+            9.9,
+            11.0,
+            12.0
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.08224878043629676,
+            "moment_sensitivity_to_constant_caps": [
+              0.002971367224200788,
+              0.0033229647221517927
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(a1DELg), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(a1DELg), Inelastic\nPARAM.:  E = (5,7,10,15,20) eV  \nCOMMENT: Shyn&Sweeney (1993) | Error: 16 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 5 eV  | 7 eV | 10 eV | 15 eV | 20 eV  DCS\n        (deg)  | (1e-19 cm²/sr) | (1e-19 cm²/sr)| (1e-19 cm²/sr)| (1e-19 cm²/sr)| (1e-19 cm²/sr)",
+          "line": 1304,
+          "energy_eV": 10.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            14.0,
+            11.0,
+            8.2,
+            7.4,
+            6.3,
+            6.2,
+            6.7,
+            7.0,
+            6.3,
+            6.9,
+            7.2,
+            7.6,
+            7.6
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.07122563607542409,
+            "moment_sensitivity_to_constant_caps": [
+              0.0023584009697204043,
+              0.005026955687777902
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(a1DELg), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(a1DELg), Inelastic\nPARAM.:  E = (5,7,10,15,20) eV  \nCOMMENT: Shyn&Sweeney (1993) | Error: 16 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 5 eV  | 7 eV | 10 eV | 15 eV | 20 eV  DCS\n        (deg)  | (1e-19 cm²/sr) | (1e-19 cm²/sr)| (1e-19 cm²/sr)| (1e-19 cm²/sr)| (1e-19 cm²/sr)",
+          "line": 1304,
+          "energy_eV": 15.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            4.4,
+            2.9,
+            2.7,
+            2.4,
+            2.7,
+            2.9,
+            2.8,
+            3.2,
+            3.5,
+            3.7,
+            4.2,
+            4.3,
+            4.8
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.0838170219774019,
+            "moment_sensitivity_to_constant_caps": [
+              0.0019123604067757677,
+              0.0070657648274723445
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(a1DELg), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(a1DELg), Inelastic\nPARAM.:  E = (5,7,10,15,20) eV  \nCOMMENT: Shyn&Sweeney (1993) | Error: 16 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 5 eV  | 7 eV | 10 eV | 15 eV | 20 eV  DCS\n        (deg)  | (1e-19 cm²/sr) | (1e-19 cm²/sr)| (1e-19 cm²/sr)| (1e-19 cm²/sr)| (1e-19 cm²/sr)",
+          "line": 1304,
+          "energy_eV": 20.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            2.2,
+            1.7,
+            1.5,
+            1.6,
+            1.7,
+            1.7,
+            1.7,
+            1.7,
+            1.9,
+            1.9,
+            2.1,
+            2.1,
+            2.4
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.07816880890668987,
+            "moment_sensitivity_to_constant_caps": [
+              0.0023745190333438605,
+              0.008349595515253234
+            ]
+          },
+          "accepted": true
+        }
+      ],
+      "energy_rows": 104,
+      "angle_points": 181,
+      "profile_file": "electronic/angular/a_1Delta_g_pdf.txt",
+      "descriptor_file": "electronic/angular/a_1Delta_g.angular"
+    },
+    {
+      "profile": "b",
+      "file_stem": "b_1Sigma_g_plus",
+      "active_range_eV": [
+        3.5714285714285716,
+        26.666666666666668
+      ],
+      "reference_energy_interpolation": "linear",
+      "runtime_energy_interpolation": "logarithmic",
+      "transition": "smoothstep_log_energy",
+      "rows": [
+        {
+          "original_process": "E + O2 -> e + O2(b1SIGg), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(b1SIGg), Inelastic\nPARAM.:  E = (5,7,10,15,20) eV  \nCOMMENT: Shyn&Sweeney (1993)  | Error: 18 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 5 eV  | 7 eV | 10 eV | 15 eV | 20 eV  DCS\n        (deg)  | (1e-20 cm²/sr) | (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)",
+          "line": 1328,
+          "energy_eV": 5.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            9.4,
+            15.0,
+            18.0,
+            17.0,
+            14.0,
+            16.0,
+            14.0,
+            15.0,
+            17.0,
+            19.0,
+            16.0,
+            19.0,
+            16.0
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "source_repairs": [
+            {
+              "kind": "decimal_transcription",
+              "angle_deg": 12,
+              "original_value": 94,
+              "corrected_value": 9.4,
+              "units": "1e-20 cm2/sr",
+              "reference": "Shyn and Sweeney, Phys. Rev. A 47, 1006 (1993)",
+              "doi": "10.1103/PhysRevA.47.1006",
+              "location": "Table I(b), p. 1007",
+              "verification": "visual inspection of the published table; the PDF text layer also omits these decimal points",
+              "source_pdf_sha256": "81ae455b82ba89b7a39d34364d10a7feb539f8bb3ac27070d699b226f17fc3c9"
+            }
+          ],
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.04834089561650236,
+            "moment_sensitivity_to_constant_caps": [
+              0.0008101883269386325,
+              0.0010993739471374883
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(b1SIGg), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(b1SIGg), Inelastic\nPARAM.:  E = (5,7,10,15,20) eV  \nCOMMENT: Shyn&Sweeney (1993)  | Error: 18 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 5 eV  | 7 eV | 10 eV | 15 eV | 20 eV  DCS\n        (deg)  | (1e-20 cm²/sr) | (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)",
+          "line": 1328,
+          "energy_eV": 7.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            8.8,
+            23.0,
+            29.0,
+            31.0,
+            28.0,
+            27.0,
+            29.0,
+            26.0,
+            27.0,
+            30.0,
+            27.0,
+            25.0,
+            20.0
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.03792540172734617,
+            "moment_sensitivity_to_constant_caps": [
+              0.0017732151209304413,
+              0.0018823847184515094
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(b1SIGg), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(b1SIGg), Inelastic\nPARAM.:  E = (5,7,10,15,20) eV  \nCOMMENT: Shyn&Sweeney (1993)  | Error: 18 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 5 eV  | 7 eV | 10 eV | 15 eV | 20 eV  DCS\n        (deg)  | (1e-20 cm²/sr) | (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)",
+          "line": 1328,
+          "energy_eV": 10.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            9.3,
+            16.0,
+            21.0,
+            24.0,
+            18.0,
+            19.0,
+            14.0,
+            14.0,
+            13.0,
+            11.0,
+            11.0,
+            11.0,
+            9.1
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.035363053769309344,
+            "moment_sensitivity_to_constant_caps": [
+              0.0001723056861451384,
+              0.0021530628588446264
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(b1SIGg), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(b1SIGg), Inelastic\nPARAM.:  E = (5,7,10,15,20) eV  \nCOMMENT: Shyn&Sweeney (1993)  | Error: 18 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 5 eV  | 7 eV | 10 eV | 15 eV | 20 eV  DCS\n        (deg)  | (1e-20 cm²/sr) | (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)",
+          "line": 1328,
+          "energy_eV": 15.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            3.9,
+            8.5,
+            8.9,
+            10.0,
+            7.9,
+            7.4,
+            6.2,
+            5.5,
+            5.3,
+            4.5,
+            4.7,
+            3.5,
+            3.1
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "source_repairs": [
+            {
+              "kind": "decimal_transcription",
+              "angle_deg": 36,
+              "original_value": 89,
+              "corrected_value": 8.9,
+              "units": "1e-20 cm2/sr",
+              "reference": "Shyn and Sweeney, Phys. Rev. A 47, 1006 (1993)",
+              "doi": "10.1103/PhysRevA.47.1006",
+              "location": "Table I(b), p. 1007",
+              "verification": "visual inspection of the published table; the PDF text layer also omits these decimal points",
+              "source_pdf_sha256": "81ae455b82ba89b7a39d34364d10a7feb539f8bb3ac27070d699b226f17fc3c9"
+            }
+          ],
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.03169844842765167,
+            "moment_sensitivity_to_constant_caps": [
+              0.0011130395366446327,
+              0.0029832287762516334
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(b1SIGg), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(b1SIGg), Inelastic\nPARAM.:  E = (5,7,10,15,20) eV  \nCOMMENT: Shyn&Sweeney (1993)  | Error: 18 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle | 5 eV  | 7 eV | 10 eV | 15 eV | 20 eV  DCS\n        (deg)  | (1e-20 cm²/sr) | (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)| (1e-20 cm²/sr)",
+          "line": 1328,
+          "energy_eV": 20.0,
+          "angles_deg": [
+            12.0,
+            24.0,
+            36.0,
+            48.0,
+            60.0,
+            72.0,
+            84.0,
+            96.0,
+            108.0,
+            120.0,
+            132.0,
+            144.0,
+            156.0
+          ],
+          "values": [
+            2.6,
+            4.7,
+            6.0,
+            6.1,
+            5.8,
+            5.7,
+            5.5,
+            5.0,
+            4.2,
+            3.3,
+            2.5,
+            1.8,
+            0.9
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.9458465291882032,
+            "modeled_probability": 0.01790242688096777,
+            "moment_sensitivity_to_constant_caps": [
+              0.00015082797638027185,
+              0.0026107760274270554
+            ]
+          },
+          "accepted": true
+        }
+      ],
+      "energy_rows": 104,
+      "angle_points": 181,
+      "profile_file": "electronic/angular/b_1Sigma_g_plus_pdf.txt",
+      "descriptor_file": "electronic/angular/b_1Sigma_g_plus.angular"
+    },
+    {
+      "profile": "second_band",
+      "file_stem": "second_band",
+      "active_range_eV": [
+        11.25,
+        83.33333333333333
+      ],
+      "reference_energy_interpolation": "linear",
+      "runtime_energy_interpolation": "logarithmic",
+      "transition": "smoothstep_log_energy",
+      "rows": [
+        {
+          "original_process": "E + O2 -> e + O2(2B), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(2B), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Second Band | Error : 25 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-19 cm²/sr)",
+          "line": 1802,
+          "energy_eV": 15.0,
+          "angles_deg": [
+            15.0,
+            20.0,
+            30.0,
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            110.0,
+            120.0,
+            130.0
+          ],
+          "values": [
+            3.64,
+            3.077,
+            1.919,
+            1.203,
+            0.7,
+            0.281,
+            0.232,
+            0.222,
+            0.213,
+            0.226,
+            0.245,
+            0.283,
+            0.323
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.8043567179878038,
+            "modeled_probability": 0.25805279422847804,
+            "moment_sensitivity_to_constant_caps": [
+              0.037213412705926624,
+              0.025319682431550413
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(2B), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(2B), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Second Band | Error : 25 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-19 cm²/sr)",
+          "line": 1802,
+          "energy_eV": 20.0,
+          "angles_deg": [
+            10.0,
+            15.0,
+            20.0,
+            30.0,
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            110.0,
+            120.0,
+            130.0
+          ],
+          "values": [
+            12.62,
+            8.156,
+            5.713,
+            1.821,
+            0.463,
+            0.246,
+            0.377,
+            0.405,
+            0.442,
+            0.279,
+            0.223,
+            0.189,
+            0.179,
+            0.171
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.8137976813493737,
+            "modeled_probability": 0.2177149672426604,
+            "moment_sensitivity_to_constant_caps": [
+              0.02720896307073004,
+              0.01675466332214805
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(2B), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(2B), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Second Band | Error : 25 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-19 cm²/sr)",
+          "line": 1802,
+          "energy_eV": 30.0,
+          "angles_deg": [
+            15.0,
+            20.0,
+            30.0,
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            110.0,
+            120.0,
+            130.0
+          ],
+          "values": [
+            13.59,
+            5.458,
+            1.152,
+            0.274,
+            0.196,
+            0.357,
+            0.384,
+            0.248,
+            0.168,
+            0.143,
+            0.135,
+            0.143,
+            0.17
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.8043567179878038,
+            "modeled_probability": 0.4625947656159478,
+            "moment_sensitivity_to_constant_caps": [
+              0.007742021120152475,
+              0.043592929575756834
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(2B), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(2B), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Second Band | Error : 25 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-19 cm²/sr)",
+          "line": 1802,
+          "energy_eV": 50.0,
+          "angles_deg": [
+            5.0,
+            10.0,
+            15.0,
+            20.0,
+            30.0,
+            40.0,
+            50.0,
+            60.0,
+            70.0,
+            80.0,
+            90.0,
+            100.0,
+            110.0,
+            120.0,
+            130.0
+          ],
+          "values": [
+            72.38,
+            25.13,
+            7.541,
+            2.835,
+            0.782,
+            0.491,
+            0.293,
+            0.237,
+            0.144,
+            0.109,
+            0.073,
+            0.105,
+            0.138,
+            0.182,
+            0.278
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "completion": {
+            "model": "boundary_matched_elastic",
+            "solid_angle_coverage": 0.8194911538891425,
+            "modeled_probability": 0.2495081295776141,
+            "moment_sensitivity_to_constant_caps": [
+              0.048905731029905634,
+              0.0015089375860876317
+            ]
+          },
+          "accepted": true
+        },
+        {
+          "original_process": "E + O2 -> e + O2(2B), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(2B), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Second Band | Error : 25 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-19 cm²/sr)",
+          "line": 1802,
+          "energy_eV": 100.0,
+          "angles_deg": [
+            3.1,
+            4.1,
+            5.1,
+            6.1,
+            8.1,
+            10.1,
+            15.1
+          ],
+          "values": [
+            196.8,
+            134.8,
+            88.59,
+            65.17,
+            33.28,
+            20.59,
+            4.046
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "accepted": false
+        },
+        {
+          "original_process": "E + O2 -> e + O2(2B), Inelastic",
+          "header": "PROCESS: E + O2 -> e + O2(2B), Inelastic\nPARAM.:  E = (15,20,30,50,100,200) eV  \nCOMMENT: Suzuki et al (2010) | Second Band | Error : 25 %\nUPDATED: 2014-11-07 09:57:41\nCOLUMNS: Angle (deg) | 15 eV |  20 eV  | 30 eV | 50 eV | 100 eV | 200 eV DCS (1e-19 cm²/sr)",
+          "line": 1802,
+          "energy_eV": 200.0,
+          "angles_deg": [
+            2.14,
+            3.14,
+            4.14,
+            5.14,
+            7.14,
+            9.14,
+            14.14
+          ],
+          "values": [
+            265.5,
+            150.0,
+            91.31,
+            50.98,
+            19.09,
+            8.954,
+            0.833
+          ],
+          "source_sha256": "92005a2411347728a9b535207cc3d3b805f43e5fe296f901896f3e83772ae5f7",
+          "accepted": false
+        }
+      ],
+      "energy_rows": 106,
+      "angle_points": 181,
+      "profile_file": "electronic/angular/second_band_pdf.txt",
+      "descriptor_file": "electronic/angular/second_band.angular"
+    }
+  ]
+}

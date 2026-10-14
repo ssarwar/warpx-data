@@ -1,0 +1,33 @@
+{
+  "format": "warpx_iaa_angular_sources_v1",
+  "archive_sha256": "b864381086120fff37eb8c658dfcb0f150b80969cf9add626a38d89bab0a3c38",
+  "thesis": "Schmalzried 2023, section 11.3.2, equation 11.40",
+  "vibrational_transition_eV": [
+    20,
+    40
+  ],
+  "minimum_angles": 8,
+  "minimum_solid_angle_coverage": 0.75,
+  "maximum_angular_gap_degrees": 20,
+  "maximum_completion_probability": 0.5,
+  "target": "O2",
+  "family": "vibrational",
+  "profiles": [
+    {
+      "profile": "vibrational",
+      "file_stem": "shared_bound_states",
+      "active_range_eV": [
+        1e-05,
+        40.0
+      ],
+      "reference_energy_interpolation": "linear",
+      "runtime_energy_interpolation": "logarithmic",
+      "transition": "smoothstep_log_energy",
+      "rows": [],
+      "energy_rows": 64,
+      "angle_points": 181,
+      "profile_file": "vibrational/angular/shared_bound_states_pdf.txt",
+      "descriptor_file": "vibrational/angular/shared_bound_states.angular"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+WARPX_EXCITATION_ANGULAR_V1
+N2
+shared_bound_states_pdf.txt
+../../elastic/differential_cross_section.txt
+1.0000000000000001e-05 10
